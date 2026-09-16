@@ -42,7 +42,7 @@ con.sql("""
 
 ```sql
 -- judges' careers alongside the FJC directory
-SELECT c.name_last, c.name_first, p.court_name, p.date_start, f.appointing_president
+SELECT c.name_last, c.name_first, p.court_name, p.date_start, s.appointing_president
 FROM "courtlistener".v_judge_positions p
 JOIN "courtlistener".judges c ON c.id = p.person_id
 JOIN "fjc-judges".judges f ON f.jid = c.fjc_id
