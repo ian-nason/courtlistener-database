@@ -220,7 +220,7 @@ dependencies = [
 
 [package.metadata]
 requires-dist = [
-    { name = "datapond-build", git = "https://github.com/datapond-db/datapond-build?tag=v0.1.1" },
+    { name = "datapond-build", git = "https://github.com/datapond-db/datapond-build?tag=v0.1.4" },
     { name = "duckdb", specifier = ">=1.0" },
     { name = "huggingface-hub" },
     { name = "pyyaml" },
@@ -229,8 +229,8 @@ requires-dist = [
 
 [[package]]
 name = "datapond-build"
-version = "0.1.1"
-source = { git = "https://github.com/datapond-db/datapond-build?tag=v0.1.1#cee5ea7efcb4cab8650216f96fdadc6a6ac4c8c0" }
+version = "0.1.4"
+source = { git = "https://github.com/datapond-db/datapond-build?tag=v0.1.4#ba9f7198a0aff3b604953b5f7bd612d15ef1755e" }
 dependencies = [
     { name = "duckdb" },
     { name = "huggingface-hub" },
