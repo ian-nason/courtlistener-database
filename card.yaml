@@ -1,0 +1,25 @@
+repo: Nason/courtlistener-database
+file: courtlistener.duckdb
+pretty_name: CourtListener judges, courts and federal judicial financial disclosures (bulk data)
+title: CourtListener Judges and Financial Disclosures
+license: other
+license_name: public-records
+license_link: https://www.courtlistener.com/help/api/bulk-data/
+tags: [judges, federal-courts, financial-disclosures, judiciary, courtlistener, free-law, duckdb, datapond]
+size_category: 100K<n<1M
+alias: cl
+table_columns: [description, row_count, column_count]
+intro: |
+  CourtListener's bulk judge database (16,190 judges, 51,289 positions, education, party
+  affiliations, race), its registry of 3,353 courts, and 32,336 federal judicial financial
+  disclosure reports with their gifts, debts, reimbursements, agreements, positions and
+  non-investment and spousal income, typed straight from CourtListener's PostgreSQL
+  schema. Judges carry the FJC id, so the tables join to the fjc-judges database.
+quick_start_sql: |
+  SELECT j.name_last, j.name_first, d.year, COUNT(g.id) AS gifts
+  FROM cl.financial_disclosures d JOIN cl.judges j ON j.id = d.person_id
+  LEFT JOIN cl.disclosure_gifts g ON g.financial_disclosure_id = d.id
+  WHERE d.year >= 2018 GROUP BY 1, 2, 3 HAVING COUNT(g.id) > 0 ORDER BY 4 DESC LIMIT 20;
+footer: |
+  Build pipeline and caveats: https://github.com/ian-nason/courtlistener-database
+  Source: Free Law Project, CourtListener bulk data (public records; please credit CourtListener).

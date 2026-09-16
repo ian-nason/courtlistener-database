@@ -1,0 +1,140 @@
+{
+ "courthouses": {
+  "date": "2025-01-31",
+  "size": 16981,
+  "file": "courthouses-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/courthouses-2025-01-31.csv.bz2"
+ },
+ "courts": {
+  "date": "2025-01-31",
+  "size": 80656,
+  "file": "courts-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/courts-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures": {
+  "date": "2025-01-31",
+  "size": 5635744,
+  "file": "financial-disclosures-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-agreements": {
+  "date": "2025-01-31",
+  "size": 318103,
+  "file": "financial-disclosures-agreements-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-agreements-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-debts": {
+  "date": "2025-01-31",
+  "size": 393616,
+  "file": "financial-disclosures-debts-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-debts-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-gifts": {
+  "date": "2025-01-31",
+  "size": 68178,
+  "file": "financial-disclosures-gifts-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-gifts-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-non-investment-income": {
+  "date": "2025-01-31",
+  "size": 441242,
+  "file": "financial-disclosures-non-investment-income-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-non-investment-income-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-positions": {
+  "date": "2025-01-31",
+  "size": 915384,
+  "file": "financial-disclosures-positions-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-positions-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-reimbursements": {
+  "date": "2025-01-31",
+  "size": 1138508,
+  "file": "financial-disclosures-reimbursements-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-reimbursements-2025-01-31.csv.bz2"
+ },
+ "financial-disclosures-spousal-income": {
+  "date": "2025-01-31",
+  "size": 515573,
+  "file": "financial-disclosures-spousal-income-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-spousal-income-2025-01-31.csv.bz2"
+ },
+ "load-bulk-data": {
+  "date": "2025-01-31",
+  "size": 18046,
+  "file": "load-bulk-data-2025-01-31.sh",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/load-bulk-data-2025-01-31.sh"
+ },
+ "oral-arguments": {
+  "date": "2024-05-06",
+  "size": 8315375,
+  "file": "oral-arguments-2024-05-06.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/oral-arguments-2024-05-06.csv.bz2"
+ },
+ "originating-court-information": {
+  "date": "2025-01-31",
+  "size": 1232155,
+  "file": "originating-court-information-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/originating-court-information-2025-01-31.csv.bz2"
+ },
+ "people-db-educations": {
+  "date": "2025-01-31",
+  "size": 213281,
+  "file": "people-db-educations-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-educations-2025-01-31.csv.bz2"
+ },
+ "people-db-people": {
+  "date": "2025-01-31",
+  "size": 454967,
+  "file": "people-db-people-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-people-2025-01-31.csv.bz2"
+ },
+ "people-db-political-affiliations": {
+  "date": "2025-01-31",
+  "size": 130643,
+  "file": "people-db-political-affiliations-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-political-affiliations-2025-01-31.csv.bz2"
+ },
+ "people-db-positions": {
+  "date": "2025-01-31",
+  "size": 1046394,
+  "file": "people-db-positions-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-positions-2025-01-31.csv.bz2"
+ },
+ "people-db-races": {
+  "date": "2025-01-31",
+  "size": 25734,
+  "file": "people-db-races-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-races-2025-01-31.csv.bz2"
+ },
+ "people-db-retention-events": {
+  "date": "2025-01-31",
+  "size": 118,
+  "file": "people-db-retention-events-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-retention-events-2025-01-31.csv.bz2"
+ },
+ "people-db-schools": {
+  "date": "2025-01-31",
+  "size": 65878,
+  "file": "people-db-schools-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-schools-2025-01-31.csv.bz2"
+ },
+ "schema": {
+  "date": "2025-01-31",
+  "size": 403418,
+  "file": "schema-2025-01-31.sql",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/schema-2025-01-31.sql"
+ },
+ "search_opinion_joined_by": {
+  "date": "2025-01-31",
+  "size": 6184,
+  "file": "search_opinion_joined_by-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/search_opinion_joined_by-2025-01-31.csv.bz2"
+ },
+ "search_opinioncluster_panel": {
+  "date": "2025-01-31",
+  "size": 4943915,
+  "file": "search_opinioncluster_panel-2025-01-31.csv.bz2",
+  "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/search_opinioncluster_panel-2025-01-31.csv.bz2"
+ }
+}

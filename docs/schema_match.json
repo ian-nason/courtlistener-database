@@ -1,0 +1,6303 @@
+{
+ "tables": {
+  "audio_audio": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "source",
+    "character varying(10)"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "judges",
+    "text"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "download_url",
+    "character varying(500)"
+   ],
+   [
+    "local_path_mp3",
+    "character varying(100)"
+   ],
+   [
+    "local_path_original_file",
+    "character varying(100)"
+   ],
+   [
+    "duration",
+    "smallint"
+   ],
+   [
+    "processing_complete",
+    "boolean"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "stt_status",
+    "smallint"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "stt_source",
+    "smallint"
+   ],
+   [
+    "stt_transcript",
+    "text"
+   ]
+  ],
+  "audio_audio_panel": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "audio_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "audio_audioevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "character varying(10)"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "judges",
+    "text"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "download_url",
+    "character varying(500)"
+   ],
+   [
+    "local_path_mp3",
+    "character varying(100)"
+   ],
+   [
+    "local_path_original_file",
+    "character varying(100)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "duration",
+    "smallint"
+   ],
+   [
+    "processing_complete",
+    "boolean"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "stt_status",
+    "smallint"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "stt_source",
+    "smallint"
+   ],
+   [
+    "stt_transcript",
+    "text"
+   ]
+  ],
+  "audio_audiopanelevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "audio_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ]
+  ],
+  "audio_audiotranscriptionmetadata": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "metadata",
+    "jsonb"
+   ],
+   [
+    "audio_id",
+    "integer"
+   ]
+  ],
+  "disclosures_agreement": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "parties_and_terms",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_agreementevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "parties_and_terms",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_debt": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "creditor_name",
+    "text"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "value_code",
+    "character varying(5)"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_debtevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "creditor_name",
+    "text"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "value_code",
+    "character varying(5)"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_financialdisclosure": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "year",
+    "smallint"
+   ],
+   [
+    "download_filepath",
+    "text"
+   ],
+   [
+    "filepath",
+    "character varying(300)"
+   ],
+   [
+    "thumbnail",
+    "character varying(300)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "page_count",
+    "smallint"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "report_type",
+    "smallint"
+   ],
+   [
+    "is_amended",
+    "boolean"
+   ],
+   [
+    "addendum_content_raw",
+    "text"
+   ],
+   [
+    "addendum_redacted",
+    "boolean"
+   ],
+   [
+    "has_been_extracted",
+    "boolean"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "disclosures_financialdisclosureevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "year",
+    "smallint"
+   ],
+   [
+    "download_filepath",
+    "text"
+   ],
+   [
+    "filepath",
+    "character varying(300)"
+   ],
+   [
+    "thumbnail",
+    "character varying(300)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "page_count",
+    "smallint"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "report_type",
+    "smallint"
+   ],
+   [
+    "is_amended",
+    "boolean"
+   ],
+   [
+    "addendum_content_raw",
+    "text"
+   ],
+   [
+    "addendum_redacted",
+    "boolean"
+   ],
+   [
+    "has_been_extracted",
+    "boolean"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_gift": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "text"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "value",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_giftevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "text"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "value",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_investment": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "page_number",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "income_during_reporting_period_code",
+    "character varying(5)"
+   ],
+   [
+    "income_during_reporting_period_type",
+    "text"
+   ],
+   [
+    "gross_value_code",
+    "character varying(5)"
+   ],
+   [
+    "gross_value_method",
+    "character varying(5)"
+   ],
+   [
+    "transaction_during_reporting_period",
+    "text"
+   ],
+   [
+    "transaction_date_raw",
+    "character varying(40)"
+   ],
+   [
+    "transaction_date",
+    "date"
+   ],
+   [
+    "transaction_value_code",
+    "character varying(5)"
+   ],
+   [
+    "transaction_gain_code",
+    "character varying(5)"
+   ],
+   [
+    "transaction_partner",
+    "text"
+   ],
+   [
+    "has_inferred_values",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_investmentevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "page_number",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "income_during_reporting_period_code",
+    "character varying(5)"
+   ],
+   [
+    "income_during_reporting_period_type",
+    "text"
+   ],
+   [
+    "gross_value_code",
+    "character varying(5)"
+   ],
+   [
+    "gross_value_method",
+    "character varying(5)"
+   ],
+   [
+    "transaction_during_reporting_period",
+    "text"
+   ],
+   [
+    "transaction_date_raw",
+    "character varying(40)"
+   ],
+   [
+    "transaction_date",
+    "date"
+   ],
+   [
+    "transaction_value_code",
+    "character varying(5)"
+   ],
+   [
+    "transaction_gain_code",
+    "character varying(5)"
+   ],
+   [
+    "transaction_partner",
+    "text"
+   ],
+   [
+    "has_inferred_values",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_noninvestmentincome": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "source_type",
+    "text"
+   ],
+   [
+    "income_amount",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_noninvestmentincomeevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "source_type",
+    "text"
+   ],
+   [
+    "income_amount",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_position": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "position",
+    "text"
+   ],
+   [
+    "organization_name",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_positionevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "position",
+    "text"
+   ],
+   [
+    "organization_name",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_reimbursement": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "text"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "location",
+    "text"
+   ],
+   [
+    "purpose",
+    "text"
+   ],
+   [
+    "items_paid_or_provided",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_reimbursementevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "text"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "location",
+    "text"
+   ],
+   [
+    "purpose",
+    "text"
+   ],
+   [
+    "items_paid_or_provided",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "disclosures_spouseincome": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source_type",
+    "text"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ]
+  ],
+  "disclosures_spouseincomeevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source_type",
+    "text"
+   ],
+   [
+    "date_raw",
+    "text"
+   ],
+   [
+    "redacted",
+    "boolean"
+   ],
+   [
+    "financial_disclosure_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_abarating": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "rating",
+    "character varying(5)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "year_rated",
+    "smallint"
+   ]
+  ],
+  "people_db_abaratingevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "year_rated",
+    "smallint"
+   ],
+   [
+    "rating",
+    "character varying(5)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_attorney": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "text"
+   ],
+   [
+    "contact_raw",
+    "text"
+   ],
+   [
+    "phone",
+    "character varying(20)"
+   ],
+   [
+    "fax",
+    "character varying(20)"
+   ],
+   [
+    "email",
+    "character varying(254)"
+   ]
+  ],
+  "people_db_attorneyorganization": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "lookup_key",
+    "text"
+   ],
+   [
+    "name",
+    "text"
+   ],
+   [
+    "address1",
+    "text"
+   ],
+   [
+    "address2",
+    "text"
+   ],
+   [
+    "city",
+    "text"
+   ],
+   [
+    "state",
+    "character varying(2)"
+   ],
+   [
+    "zip_code",
+    "character varying(10)"
+   ]
+  ],
+  "people_db_attorneyorganizationassociation": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "attorney_id",
+    "integer"
+   ],
+   [
+    "attorney_organization_id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ]
+  ],
+  "people_db_criminalcomplaint": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "name",
+    "text"
+   ],
+   [
+    "disposition",
+    "text"
+   ],
+   [
+    "party_type_id",
+    "integer"
+   ]
+  ],
+  "people_db_criminalcount": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "name",
+    "text"
+   ],
+   [
+    "disposition",
+    "text"
+   ],
+   [
+    "status",
+    "smallint"
+   ],
+   [
+    "party_type_id",
+    "integer"
+   ]
+  ],
+  "people_db_education": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "degree_detail",
+    "character varying(100)"
+   ],
+   [
+    "degree_year",
+    "smallint"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "school_id",
+    "integer"
+   ],
+   [
+    "degree_level",
+    "character varying(4)"
+   ]
+  ],
+  "people_db_educationevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "degree_level",
+    "character varying(4)"
+   ],
+   [
+    "degree_detail",
+    "character varying(100)"
+   ],
+   [
+    "degree_year",
+    "smallint"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "school_id",
+    "integer"
+   ]
+  ],
+  "people_db_party": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "text"
+   ],
+   [
+    "extra_info",
+    "text"
+   ]
+  ],
+  "people_db_partytype": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "name",
+    "character varying(100)"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "party_id",
+    "integer"
+   ],
+   [
+    "date_terminated",
+    "date"
+   ],
+   [
+    "extra_info",
+    "text"
+   ],
+   [
+    "highest_offense_level_opening",
+    "text"
+   ],
+   [
+    "highest_offense_level_terminated",
+    "text"
+   ]
+  ],
+  "people_db_person": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "fjc_id",
+    "integer"
+   ],
+   [
+    "slug",
+    "character varying(158)"
+   ],
+   [
+    "name_first",
+    "character varying(50)"
+   ],
+   [
+    "name_middle",
+    "character varying(50)"
+   ],
+   [
+    "name_last",
+    "character varying(50)"
+   ],
+   [
+    "name_suffix",
+    "character varying(5)"
+   ],
+   [
+    "date_dob",
+    "date"
+   ],
+   [
+    "date_granularity_dob",
+    "character varying(15)"
+   ],
+   [
+    "date_dod",
+    "date"
+   ],
+   [
+    "date_granularity_dod",
+    "character varying(15)"
+   ],
+   [
+    "dob_city",
+    "character varying(50)"
+   ],
+   [
+    "dob_state",
+    "character varying(2)"
+   ],
+   [
+    "dod_city",
+    "character varying(50)"
+   ],
+   [
+    "dod_state",
+    "character varying(2)"
+   ],
+   [
+    "gender",
+    "character varying(2)"
+   ],
+   [
+    "is_alias_of_id",
+    "integer"
+   ],
+   [
+    "religion",
+    "character varying(30)"
+   ],
+   [
+    "has_photo",
+    "boolean"
+   ],
+   [
+    "ftm_total_received",
+    "double precision"
+   ],
+   [
+    "ftm_eid",
+    "character varying(30)"
+   ],
+   [
+    "date_completed",
+    "timestamp with time zone"
+   ],
+   [
+    "dob_country",
+    "character varying(50)"
+   ],
+   [
+    "dod_country",
+    "character varying(50)"
+   ]
+  ],
+  "people_db_person_race": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "race_id",
+    "integer"
+   ]
+  ],
+  "people_db_personevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_completed",
+    "timestamp with time zone"
+   ],
+   [
+    "fjc_id",
+    "integer"
+   ],
+   [
+    "slug",
+    "character varying(158)"
+   ],
+   [
+    "name_first",
+    "character varying(50)"
+   ],
+   [
+    "name_middle",
+    "character varying(50)"
+   ],
+   [
+    "name_last",
+    "character varying(50)"
+   ],
+   [
+    "name_suffix",
+    "character varying(5)"
+   ],
+   [
+    "date_dob",
+    "date"
+   ],
+   [
+    "date_granularity_dob",
+    "character varying(15)"
+   ],
+   [
+    "date_dod",
+    "date"
+   ],
+   [
+    "date_granularity_dod",
+    "character varying(15)"
+   ],
+   [
+    "dob_city",
+    "character varying(50)"
+   ],
+   [
+    "dob_state",
+    "character varying(2)"
+   ],
+   [
+    "dob_country",
+    "character varying(50)"
+   ],
+   [
+    "dod_city",
+    "character varying(50)"
+   ],
+   [
+    "dod_state",
+    "character varying(2)"
+   ],
+   [
+    "dod_country",
+    "character varying(50)"
+   ],
+   [
+    "gender",
+    "character varying(2)"
+   ],
+   [
+    "religion",
+    "character varying(30)"
+   ],
+   [
+    "ftm_total_received",
+    "double precision"
+   ],
+   [
+    "ftm_eid",
+    "character varying(30)"
+   ],
+   [
+    "has_photo",
+    "boolean"
+   ],
+   [
+    "is_alias_of_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_personraceevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "race_id",
+    "integer"
+   ]
+  ],
+  "people_db_politicalaffiliation": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "political_party",
+    "character varying(5)"
+   ],
+   [
+    "source",
+    "character varying(5)"
+   ],
+   [
+    "date_start",
+    "date"
+   ],
+   [
+    "date_granularity_start",
+    "character varying(15)"
+   ],
+   [
+    "date_end",
+    "date"
+   ],
+   [
+    "date_granularity_end",
+    "character varying(15)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "people_db_politicalaffiliationevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "political_party",
+    "character varying(5)"
+   ],
+   [
+    "source",
+    "character varying(5)"
+   ],
+   [
+    "date_start",
+    "date"
+   ],
+   [
+    "date_granularity_start",
+    "character varying(15)"
+   ],
+   [
+    "date_end",
+    "date"
+   ],
+   [
+    "date_granularity_end",
+    "character varying(15)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_position": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "position_type",
+    "character varying(20)"
+   ],
+   [
+    "job_title",
+    "character varying(100)"
+   ],
+   [
+    "organization_name",
+    "character varying(120)"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_nominated",
+    "date"
+   ],
+   [
+    "date_elected",
+    "date"
+   ],
+   [
+    "date_recess_appointment",
+    "date"
+   ],
+   [
+    "date_referred_to_judicial_committee",
+    "date"
+   ],
+   [
+    "date_judicial_committee_action",
+    "date"
+   ],
+   [
+    "date_hearing",
+    "date"
+   ],
+   [
+    "date_confirmation",
+    "date"
+   ],
+   [
+    "date_start",
+    "date"
+   ],
+   [
+    "date_granularity_start",
+    "character varying(15)"
+   ],
+   [
+    "date_retirement",
+    "date"
+   ],
+   [
+    "date_termination",
+    "date"
+   ],
+   [
+    "date_granularity_termination",
+    "character varying(15)"
+   ],
+   [
+    "judicial_committee_action",
+    "character varying(20)"
+   ],
+   [
+    "nomination_process",
+    "character varying(20)"
+   ],
+   [
+    "voice_vote",
+    "boolean"
+   ],
+   [
+    "votes_yes",
+    "integer"
+   ],
+   [
+    "votes_no",
+    "integer"
+   ],
+   [
+    "how_selected",
+    "character varying(20)"
+   ],
+   [
+    "termination_reason",
+    "character varying(25)"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "school_id",
+    "integer"
+   ],
+   [
+    "appointer_id",
+    "integer"
+   ],
+   [
+    "predecessor_id",
+    "integer"
+   ],
+   [
+    "supervisor_id",
+    "integer"
+   ],
+   [
+    "vote_type",
+    "character varying(2)"
+   ],
+   [
+    "votes_no_percent",
+    "double precision"
+   ],
+   [
+    "votes_yes_percent",
+    "double precision"
+   ],
+   [
+    "location_city",
+    "character varying(50)"
+   ],
+   [
+    "location_state",
+    "character varying(2)"
+   ],
+   [
+    "has_inferred_values",
+    "boolean"
+   ],
+   [
+    "sector",
+    "smallint"
+   ]
+  ],
+  "people_db_positionevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "position_type",
+    "character varying(20)"
+   ],
+   [
+    "job_title",
+    "character varying(100)"
+   ],
+   [
+    "sector",
+    "smallint"
+   ],
+   [
+    "organization_name",
+    "character varying(120)"
+   ],
+   [
+    "location_city",
+    "character varying(50)"
+   ],
+   [
+    "location_state",
+    "character varying(2)"
+   ],
+   [
+    "date_nominated",
+    "date"
+   ],
+   [
+    "date_elected",
+    "date"
+   ],
+   [
+    "date_recess_appointment",
+    "date"
+   ],
+   [
+    "date_referred_to_judicial_committee",
+    "date"
+   ],
+   [
+    "date_judicial_committee_action",
+    "date"
+   ],
+   [
+    "judicial_committee_action",
+    "character varying(20)"
+   ],
+   [
+    "date_hearing",
+    "date"
+   ],
+   [
+    "date_confirmation",
+    "date"
+   ],
+   [
+    "date_start",
+    "date"
+   ],
+   [
+    "date_granularity_start",
+    "character varying(15)"
+   ],
+   [
+    "date_termination",
+    "date"
+   ],
+   [
+    "termination_reason",
+    "character varying(25)"
+   ],
+   [
+    "date_granularity_termination",
+    "character varying(15)"
+   ],
+   [
+    "date_retirement",
+    "date"
+   ],
+   [
+    "nomination_process",
+    "character varying(20)"
+   ],
+   [
+    "vote_type",
+    "character varying(2)"
+   ],
+   [
+    "voice_vote",
+    "boolean"
+   ],
+   [
+    "votes_yes",
+    "integer"
+   ],
+   [
+    "votes_no",
+    "integer"
+   ],
+   [
+    "votes_yes_percent",
+    "double precision"
+   ],
+   [
+    "votes_no_percent",
+    "double precision"
+   ],
+   [
+    "how_selected",
+    "character varying(20)"
+   ],
+   [
+    "has_inferred_values",
+    "boolean"
+   ],
+   [
+    "appointer_id",
+    "integer"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "predecessor_id",
+    "integer"
+   ],
+   [
+    "school_id",
+    "integer"
+   ],
+   [
+    "supervisor_id",
+    "integer"
+   ]
+  ],
+  "people_db_race": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "race",
+    "character varying(5)"
+   ]
+  ],
+  "people_db_raceevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "race",
+    "character varying(5)"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_retentionevent": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "retention_type",
+    "character varying(10)"
+   ],
+   [
+    "date_retention",
+    "date"
+   ],
+   [
+    "votes_yes",
+    "integer"
+   ],
+   [
+    "votes_no",
+    "integer"
+   ],
+   [
+    "unopposed",
+    "boolean"
+   ],
+   [
+    "won",
+    "boolean"
+   ],
+   [
+    "position_id",
+    "integer"
+   ],
+   [
+    "votes_no_percent",
+    "double precision"
+   ],
+   [
+    "votes_yes_percent",
+    "double precision"
+   ]
+  ],
+  "people_db_retentioneventevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "retention_type",
+    "character varying(10)"
+   ],
+   [
+    "date_retention",
+    "date"
+   ],
+   [
+    "votes_yes",
+    "integer"
+   ],
+   [
+    "votes_no",
+    "integer"
+   ],
+   [
+    "votes_yes_percent",
+    "double precision"
+   ],
+   [
+    "votes_no_percent",
+    "double precision"
+   ],
+   [
+    "unopposed",
+    "boolean"
+   ],
+   [
+    "won",
+    "boolean"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "position_id",
+    "integer"
+   ]
+  ],
+  "people_db_role": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "role",
+    "smallint"
+   ],
+   [
+    "date_action",
+    "date"
+   ],
+   [
+    "attorney_id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "party_id",
+    "integer"
+   ],
+   [
+    "role_raw",
+    "text"
+   ]
+  ],
+  "people_db_school": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "character varying(120)"
+   ],
+   [
+    "ein",
+    "integer"
+   ],
+   [
+    "is_alias_of_id",
+    "integer"
+   ]
+  ],
+  "people_db_schoolevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "character varying(120)"
+   ],
+   [
+    "ein",
+    "integer"
+   ],
+   [
+    "is_alias_of_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "people_db_source": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "url",
+    "character varying(2000)"
+   ],
+   [
+    "date_accessed",
+    "date"
+   ],
+   [
+    "notes",
+    "text"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ]
+  ],
+  "people_db_sourceevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "url",
+    "character varying(2000)"
+   ],
+   [
+    "date_accessed",
+    "date"
+   ],
+   [
+    "notes",
+    "text"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "recap_emailprocessingqueue": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "filepath",
+    "character varying(300)"
+   ],
+   [
+    "status",
+    "smallint"
+   ],
+   [
+    "status_message",
+    "text"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "uploader_id",
+    "integer"
+   ],
+   [
+    "message_id",
+    "text"
+   ],
+   [
+    "destination_emails",
+    "jsonb"
+   ]
+  ],
+  "recap_emailprocessingqueue_recap_documents": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "emailprocessingqueue_id",
+    "integer"
+   ],
+   [
+    "recapdocument_id",
+    "integer"
+   ]
+  ],
+  "recap_fjcintegrateddatabase": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "dataset_source",
+    "smallint"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "office",
+    "character varying(3)"
+   ],
+   [
+    "docket_number",
+    "character varying(7)"
+   ],
+   [
+    "origin",
+    "smallint"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "jurisdiction",
+    "smallint"
+   ],
+   [
+    "nature_of_suit",
+    "integer"
+   ],
+   [
+    "title",
+    "text"
+   ],
+   [
+    "section",
+    "character varying(200)"
+   ],
+   [
+    "subsection",
+    "character varying(200)"
+   ],
+   [
+    "diversity_of_residence",
+    "smallint"
+   ],
+   [
+    "class_action",
+    "boolean"
+   ],
+   [
+    "monetary_demand",
+    "integer"
+   ],
+   [
+    "county_of_residence",
+    "integer"
+   ],
+   [
+    "arbitration_at_filing",
+    "character varying(1)"
+   ],
+   [
+    "arbitration_at_termination",
+    "character varying(1)"
+   ],
+   [
+    "multidistrict_litigation_docket_number",
+    "text"
+   ],
+   [
+    "plaintiff",
+    "text"
+   ],
+   [
+    "defendant",
+    "text"
+   ],
+   [
+    "date_transfer",
+    "date"
+   ],
+   [
+    "transfer_office",
+    "character varying(3)"
+   ],
+   [
+    "transfer_docket_number",
+    "text"
+   ],
+   [
+    "transfer_origin",
+    "text"
+   ],
+   [
+    "date_terminated",
+    "date"
+   ],
+   [
+    "termination_class_action_status",
+    "smallint"
+   ],
+   [
+    "procedural_progress",
+    "smallint"
+   ],
+   [
+    "disposition",
+    "smallint"
+   ],
+   [
+    "nature_of_judgement",
+    "smallint"
+   ],
+   [
+    "amount_received",
+    "integer"
+   ],
+   [
+    "judgment",
+    "smallint"
+   ],
+   [
+    "pro_se",
+    "smallint"
+   ],
+   [
+    "year_of_tape",
+    "integer"
+   ],
+   [
+    "circuit_id",
+    "character varying(15)"
+   ],
+   [
+    "district_id",
+    "character varying(15)"
+   ],
+   [
+    "nature_of_offense",
+    "character varying(4)"
+   ],
+   [
+    "version",
+    "integer"
+   ]
+  ],
+  "recap_pacerfetchqueue": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_completed",
+    "timestamp with time zone"
+   ],
+   [
+    "status",
+    "smallint"
+   ],
+   [
+    "request_type",
+    "smallint"
+   ],
+   [
+    "message",
+    "text"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "docket_number",
+    "character varying(50)"
+   ],
+   [
+    "de_date_start",
+    "date"
+   ],
+   [
+    "de_date_end",
+    "date"
+   ],
+   [
+    "de_number_start",
+    "integer"
+   ],
+   [
+    "de_number_end",
+    "integer"
+   ],
+   [
+    "show_parties_and_counsel",
+    "boolean"
+   ],
+   [
+    "show_terminated_parties",
+    "boolean"
+   ],
+   [
+    "show_list_of_member_cases",
+    "boolean"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "recap_document_id",
+    "integer"
+   ],
+   [
+    "user_id",
+    "integer"
+   ]
+  ],
+  "recap_pacerhtmlfiles": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "filepath",
+    "character varying(150)"
+   ],
+   [
+    "object_id",
+    "integer"
+   ],
+   [
+    "content_type_id",
+    "integer"
+   ],
+   [
+    "upload_type",
+    "smallint"
+   ]
+  ],
+  "recap_processingqueue": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "pacer_doc_id",
+    "character varying(64)"
+   ],
+   [
+    "attachment_number",
+    "smallint"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "status",
+    "smallint"
+   ],
+   [
+    "upload_type",
+    "smallint"
+   ],
+   [
+    "error_message",
+    "text"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "uploader_id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "docket_entry_id",
+    "integer"
+   ],
+   [
+    "recap_document_id",
+    "integer"
+   ],
+   [
+    "document_number",
+    "bigint"
+   ],
+   [
+    "debug",
+    "boolean"
+   ],
+   [
+    "acms_document_guid",
+    "character varying(64)"
+   ]
+  ],
+  "recap_rss_rssfeeddata": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "filepath",
+    "character varying(150)"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ]
+  ],
+  "recap_rss_rssfeedstatus": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_build",
+    "timestamp with time zone"
+   ],
+   [
+    "status",
+    "smallint"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "is_sweep",
+    "boolean"
+   ]
+  ],
+  "recap_rss_rssitemcache": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "hash",
+    "character varying(64)"
+   ]
+  ],
+  "search_court": [
+   [
+    "id",
+    "character varying(15)"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "in_use",
+    "boolean"
+   ],
+   [
+    "has_opinion_scraper",
+    "boolean"
+   ],
+   [
+    "has_oral_argument_scraper",
+    "boolean"
+   ],
+   [
+    "position",
+    "double precision"
+   ],
+   [
+    "citation_string",
+    "character varying(100)"
+   ],
+   [
+    "short_name",
+    "character varying(100)"
+   ],
+   [
+    "full_name",
+    "character varying(200)"
+   ],
+   [
+    "url",
+    "character varying(500)"
+   ],
+   [
+    "start_date",
+    "date"
+   ],
+   [
+    "end_date",
+    "date"
+   ],
+   [
+    "jurisdiction",
+    "character varying(3)"
+   ],
+   [
+    "notes",
+    "text"
+   ],
+   [
+    "pacer_court_id",
+    "smallint"
+   ],
+   [
+    "fjc_court_id",
+    "character varying(3)"
+   ],
+   [
+    "pacer_has_rss_feed",
+    "boolean"
+   ],
+   [
+    "date_last_pacer_contact",
+    "timestamp with time zone"
+   ],
+   [
+    "pacer_rss_entry_types",
+    "text"
+   ],
+   [
+    "parent_court_id",
+    "character varying(15)"
+   ]
+  ],
+  "search_docket": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_argued",
+    "date"
+   ],
+   [
+    "date_reargued",
+    "date"
+   ],
+   [
+    "date_reargument_denied",
+    "date"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "slug",
+    "character varying(75)"
+   ],
+   [
+    "docket_number",
+    "text"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "date_cert_denied",
+    "date"
+   ],
+   [
+    "date_cert_granted",
+    "date"
+   ],
+   [
+    "assigned_to_id",
+    "integer"
+   ],
+   [
+    "cause",
+    "character varying(2000)"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "date_last_filing",
+    "date"
+   ],
+   [
+    "date_terminated",
+    "date"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "jurisdiction_type",
+    "character varying(100)"
+   ],
+   [
+    "jury_demand",
+    "character varying(500)"
+   ],
+   [
+    "nature_of_suit",
+    "character varying(1000)"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "referred_to_id",
+    "integer"
+   ],
+   [
+    "source",
+    "smallint"
+   ],
+   [
+    "assigned_to_str",
+    "text"
+   ],
+   [
+    "referred_to_str",
+    "text"
+   ],
+   [
+    "view_count",
+    "integer"
+   ],
+   [
+    "date_last_index",
+    "timestamp with time zone"
+   ],
+   [
+    "appeal_from_id",
+    "character varying(15)"
+   ],
+   [
+    "appeal_from_str",
+    "text"
+   ],
+   [
+    "appellate_case_type_information",
+    "text"
+   ],
+   [
+    "appellate_fee_status",
+    "text"
+   ],
+   [
+    "panel_str",
+    "text"
+   ],
+   [
+    "originating_court_information_id",
+    "integer"
+   ],
+   [
+    "mdl_status",
+    "character varying(100)"
+   ],
+   [
+    "filepath_ia_json",
+    "character varying(1000)"
+   ],
+   [
+    "ia_date_first_change",
+    "timestamp with time zone"
+   ],
+   [
+    "ia_needs_upload",
+    "boolean"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "docket_number_core",
+    "character varying(20)"
+   ],
+   [
+    "idb_data_id",
+    "integer"
+   ],
+   [
+    "federal_defendant_number",
+    "smallint"
+   ],
+   [
+    "federal_dn_case_type",
+    "character varying(6)"
+   ],
+   [
+    "federal_dn_judge_initials_assigned",
+    "character varying(5)"
+   ],
+   [
+    "federal_dn_judge_initials_referred",
+    "character varying(5)"
+   ],
+   [
+    "federal_dn_office_code",
+    "character varying(3)"
+   ],
+   [
+    "parent_docket_id",
+    "integer"
+   ]
+  ],
+  "search_opinion": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "type",
+    "character varying(20)"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "download_url",
+    "character varying(500)"
+   ],
+   [
+    "local_path",
+    "character varying(100)"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "html",
+    "text"
+   ],
+   [
+    "html_lawbox",
+    "text"
+   ],
+   [
+    "html_columbia",
+    "text"
+   ],
+   [
+    "html_with_citations",
+    "text"
+   ],
+   [
+    "extracted_by_ocr",
+    "boolean"
+   ],
+   [
+    "author_id",
+    "integer"
+   ],
+   [
+    "cluster_id",
+    "integer"
+   ],
+   [
+    "per_curiam",
+    "boolean"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "author_str",
+    "text"
+   ],
+   [
+    "joined_by_str",
+    "text"
+   ],
+   [
+    "xml_harvard",
+    "text"
+   ],
+   [
+    "html_anon_2020",
+    "text"
+   ],
+   [
+    "ordering_key",
+    "integer"
+   ]
+  ],
+  "search_opinioncluster": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "judges",
+    "text"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "slug",
+    "character varying(75)"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "scdb_id",
+    "character varying(10)"
+   ],
+   [
+    "source",
+    "character varying(10)"
+   ],
+   [
+    "procedural_history",
+    "text"
+   ],
+   [
+    "attorneys",
+    "text"
+   ],
+   [
+    "nature_of_suit",
+    "text"
+   ],
+   [
+    "posture",
+    "text"
+   ],
+   [
+    "syllabus",
+    "text"
+   ],
+   [
+    "citation_count",
+    "integer"
+   ],
+   [
+    "precedential_status",
+    "character varying(50)"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "scdb_decision_direction",
+    "integer"
+   ],
+   [
+    "scdb_votes_majority",
+    "integer"
+   ],
+   [
+    "scdb_votes_minority",
+    "integer"
+   ],
+   [
+    "date_filed_is_approximate",
+    "boolean"
+   ],
+   [
+    "correction",
+    "text"
+   ],
+   [
+    "cross_reference",
+    "text"
+   ],
+   [
+    "disposition",
+    "text"
+   ],
+   [
+    "filepath_json_harvard",
+    "character varying(1000)"
+   ],
+   [
+    "headnotes",
+    "text"
+   ],
+   [
+    "history",
+    "text"
+   ],
+   [
+    "other_dates",
+    "text"
+   ],
+   [
+    "summary",
+    "text"
+   ],
+   [
+    "arguments",
+    "text"
+   ],
+   [
+    "headmatter",
+    "text"
+   ],
+   [
+    "filepath_pdf_harvard",
+    "character varying(100)"
+   ]
+  ],
+  "search_bankruptcyinformation": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_converted",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_to_file_claims",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_to_file_govt",
+    "timestamp with time zone"
+   ],
+   [
+    "date_debtor_dismissed",
+    "timestamp with time zone"
+   ],
+   [
+    "chapter",
+    "character varying(10)"
+   ],
+   [
+    "trustee_str",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ]
+  ],
+  "search_bankruptcyinformationevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_converted",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_to_file_claims",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_to_file_govt",
+    "timestamp with time zone"
+   ],
+   [
+    "date_debtor_dismissed",
+    "timestamp with time zone"
+   ],
+   [
+    "chapter",
+    "character varying(10)"
+   ],
+   [
+    "trustee_str",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_citation": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "volume",
+    "smallint"
+   ],
+   [
+    "reporter",
+    "text"
+   ],
+   [
+    "page",
+    "text"
+   ],
+   [
+    "type",
+    "smallint"
+   ],
+   [
+    "cluster_id",
+    "integer"
+   ]
+  ],
+  "search_citationevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "volume",
+    "smallint"
+   ],
+   [
+    "reporter",
+    "text"
+   ],
+   [
+    "page",
+    "text"
+   ],
+   [
+    "type",
+    "smallint"
+   ],
+   [
+    "cluster_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_claim": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_claim_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_original_entered",
+    "timestamp with time zone"
+   ],
+   [
+    "date_original_filed",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_amendment_entered",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_amendment_filed",
+    "timestamp with time zone"
+   ],
+   [
+    "claim_number",
+    "character varying(10)"
+   ],
+   [
+    "creditor_details",
+    "text"
+   ],
+   [
+    "creditor_id",
+    "character varying(50)"
+   ],
+   [
+    "status",
+    "character varying(1000)"
+   ],
+   [
+    "entered_by",
+    "character varying(1000)"
+   ],
+   [
+    "filed_by",
+    "character varying(1000)"
+   ],
+   [
+    "amount_claimed",
+    "character varying(100)"
+   ],
+   [
+    "unsecured_claimed",
+    "character varying(100)"
+   ],
+   [
+    "secured_claimed",
+    "character varying(100)"
+   ],
+   [
+    "priority_claimed",
+    "character varying(100)"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "remarks",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ]
+  ],
+  "search_claim_tags": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "claim_id",
+    "integer"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_claimevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_claim_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_original_entered",
+    "timestamp with time zone"
+   ],
+   [
+    "date_original_filed",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_amendment_entered",
+    "timestamp with time zone"
+   ],
+   [
+    "date_last_amendment_filed",
+    "timestamp with time zone"
+   ],
+   [
+    "claim_number",
+    "character varying(10)"
+   ],
+   [
+    "creditor_details",
+    "text"
+   ],
+   [
+    "creditor_id",
+    "character varying(50)"
+   ],
+   [
+    "status",
+    "character varying(1000)"
+   ],
+   [
+    "entered_by",
+    "character varying(1000)"
+   ],
+   [
+    "filed_by",
+    "character varying(1000)"
+   ],
+   [
+    "amount_claimed",
+    "character varying(100)"
+   ],
+   [
+    "unsecured_claimed",
+    "character varying(100)"
+   ],
+   [
+    "secured_claimed",
+    "character varying(100)"
+   ],
+   [
+    "priority_claimed",
+    "character varying(100)"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "remarks",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_claimhistory": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_upload",
+    "timestamp with time zone"
+   ],
+   [
+    "document_number",
+    "character varying(32)"
+   ],
+   [
+    "attachment_number",
+    "smallint"
+   ],
+   [
+    "pacer_doc_id",
+    "character varying(64)"
+   ],
+   [
+    "is_available",
+    "boolean"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "file_size",
+    "integer"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "thumbnail",
+    "character varying(100)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "ocr_status",
+    "smallint"
+   ],
+   [
+    "is_free_on_pacer",
+    "boolean"
+   ],
+   [
+    "is_sealed",
+    "boolean"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "claim_document_type",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "claim_doc_id",
+    "character varying(32)"
+   ],
+   [
+    "pacer_dm_id",
+    "integer"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "claim_id",
+    "integer"
+   ]
+  ],
+  "search_claimhistoryevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "file_size",
+    "integer"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "thumbnail",
+    "character varying(100)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "ocr_status",
+    "smallint"
+   ],
+   [
+    "date_upload",
+    "timestamp with time zone"
+   ],
+   [
+    "document_number",
+    "character varying(32)"
+   ],
+   [
+    "attachment_number",
+    "smallint"
+   ],
+   [
+    "pacer_doc_id",
+    "character varying(64)"
+   ],
+   [
+    "is_available",
+    "boolean"
+   ],
+   [
+    "is_free_on_pacer",
+    "boolean"
+   ],
+   [
+    "is_sealed",
+    "boolean"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "claim_document_type",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "claim_doc_id",
+    "character varying(32)"
+   ],
+   [
+    "pacer_dm_id",
+    "integer"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "claim_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_claimtagsevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "claim_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_court_appeals_to": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "from_court_id",
+    "character varying(15)"
+   ],
+   [
+    "to_court_id",
+    "character varying(15)"
+   ]
+  ],
+  "search_courtappealstoevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "from_court_id",
+    "character varying(15)"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "to_court_id",
+    "character varying(15)"
+   ]
+  ],
+  "search_courtevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "character varying(15)"
+   ],
+   [
+    "pacer_court_id",
+    "smallint"
+   ],
+   [
+    "pacer_has_rss_feed",
+    "boolean"
+   ],
+   [
+    "pacer_rss_entry_types",
+    "text"
+   ],
+   [
+    "date_last_pacer_contact",
+    "timestamp with time zone"
+   ],
+   [
+    "fjc_court_id",
+    "character varying(3)"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "in_use",
+    "boolean"
+   ],
+   [
+    "has_opinion_scraper",
+    "boolean"
+   ],
+   [
+    "has_oral_argument_scraper",
+    "boolean"
+   ],
+   [
+    "position",
+    "double precision"
+   ],
+   [
+    "citation_string",
+    "character varying(100)"
+   ],
+   [
+    "short_name",
+    "character varying(100)"
+   ],
+   [
+    "full_name",
+    "character varying(200)"
+   ],
+   [
+    "url",
+    "character varying(500)"
+   ],
+   [
+    "start_date",
+    "date"
+   ],
+   [
+    "end_date",
+    "date"
+   ],
+   [
+    "jurisdiction",
+    "character varying(3)"
+   ],
+   [
+    "notes",
+    "text"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "character varying(15)"
+   ],
+   [
+    "parent_court_id",
+    "character varying(15)"
+   ]
+  ],
+  "search_courthouse": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "court_seat",
+    "boolean"
+   ],
+   [
+    "building_name",
+    "text"
+   ],
+   [
+    "address1",
+    "text"
+   ],
+   [
+    "address2",
+    "text"
+   ],
+   [
+    "city",
+    "text"
+   ],
+   [
+    "county",
+    "text"
+   ],
+   [
+    "state",
+    "character varying(2)"
+   ],
+   [
+    "zip_code",
+    "character varying(10)"
+   ],
+   [
+    "country_code",
+    "text"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ]
+  ],
+  "search_courthouseevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "court_seat",
+    "boolean"
+   ],
+   [
+    "building_name",
+    "text"
+   ],
+   [
+    "address1",
+    "text"
+   ],
+   [
+    "address2",
+    "text"
+   ],
+   [
+    "city",
+    "text"
+   ],
+   [
+    "county",
+    "text"
+   ],
+   [
+    "state",
+    "character varying(2)"
+   ],
+   [
+    "zip_code",
+    "character varying(10)"
+   ],
+   [
+    "country_code",
+    "text"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_docket_panel": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "search_docket_tags": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_docketentry": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "entry_number",
+    "bigint"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pacer_sequence_number",
+    "integer"
+   ],
+   [
+    "recap_sequence_number",
+    "character varying(50)"
+   ],
+   [
+    "time_filed",
+    "time without time zone"
+   ]
+  ],
+  "search_docketentry_tags": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docketentry_id",
+    "integer"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_docketentryevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "entry_number",
+    "bigint"
+   ],
+   [
+    "recap_sequence_number",
+    "character varying(50)"
+   ],
+   [
+    "pacer_sequence_number",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "time_filed",
+    "time without time zone"
+   ]
+  ],
+  "search_docketentrytagsevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docketentry_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_docketevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "source",
+    "smallint"
+   ],
+   [
+    "appeal_from_str",
+    "text"
+   ],
+   [
+    "assigned_to_str",
+    "text"
+   ],
+   [
+    "referred_to_str",
+    "text"
+   ],
+   [
+    "panel_str",
+    "text"
+   ],
+   [
+    "date_last_index",
+    "timestamp with time zone"
+   ],
+   [
+    "date_cert_granted",
+    "date"
+   ],
+   [
+    "date_cert_denied",
+    "date"
+   ],
+   [
+    "date_argued",
+    "date"
+   ],
+   [
+    "date_reargued",
+    "date"
+   ],
+   [
+    "date_reargument_denied",
+    "date"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "date_terminated",
+    "date"
+   ],
+   [
+    "date_last_filing",
+    "date"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "slug",
+    "character varying(75)"
+   ],
+   [
+    "docket_number",
+    "text"
+   ],
+   [
+    "docket_number_core",
+    "character varying(20)"
+   ],
+   [
+    "pacer_case_id",
+    "character varying(100)"
+   ],
+   [
+    "cause",
+    "character varying(2000)"
+   ],
+   [
+    "nature_of_suit",
+    "character varying(1000)"
+   ],
+   [
+    "jury_demand",
+    "character varying(500)"
+   ],
+   [
+    "jurisdiction_type",
+    "character varying(100)"
+   ],
+   [
+    "appellate_fee_status",
+    "text"
+   ],
+   [
+    "appellate_case_type_information",
+    "text"
+   ],
+   [
+    "mdl_status",
+    "character varying(100)"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia_json",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "ia_needs_upload",
+    "boolean"
+   ],
+   [
+    "ia_date_first_change",
+    "timestamp with time zone"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "appeal_from_id",
+    "character varying(15)"
+   ],
+   [
+    "assigned_to_id",
+    "integer"
+   ],
+   [
+    "court_id",
+    "character varying(15)"
+   ],
+   [
+    "idb_data_id",
+    "integer"
+   ],
+   [
+    "originating_court_information_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "referred_to_id",
+    "integer"
+   ],
+   [
+    "federal_defendant_number",
+    "smallint"
+   ],
+   [
+    "federal_dn_case_type",
+    "character varying(6)"
+   ],
+   [
+    "federal_dn_judge_initials_assigned",
+    "character varying(5)"
+   ],
+   [
+    "federal_dn_judge_initials_referred",
+    "character varying(5)"
+   ],
+   [
+    "federal_dn_office_code",
+    "character varying(3)"
+   ],
+   [
+    "parent_docket_id",
+    "integer"
+   ]
+  ],
+  "search_docketpanelevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ]
+  ],
+  "search_dockettagsevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_opinion_joined_by": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinion_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "search_opinioncluster_non_participating_judges": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinioncluster_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "search_opinioncluster_panel": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinioncluster_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ]
+  ],
+  "search_opinionclusterevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "judges",
+    "text"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "date_filed_is_approximate",
+    "boolean"
+   ],
+   [
+    "slug",
+    "character varying(75)"
+   ],
+   [
+    "case_name_short",
+    "text"
+   ],
+   [
+    "case_name",
+    "text"
+   ],
+   [
+    "case_name_full",
+    "text"
+   ],
+   [
+    "scdb_id",
+    "character varying(10)"
+   ],
+   [
+    "scdb_decision_direction",
+    "integer"
+   ],
+   [
+    "scdb_votes_majority",
+    "integer"
+   ],
+   [
+    "scdb_votes_minority",
+    "integer"
+   ],
+   [
+    "source",
+    "character varying(10)"
+   ],
+   [
+    "procedural_history",
+    "text"
+   ],
+   [
+    "attorneys",
+    "text"
+   ],
+   [
+    "nature_of_suit",
+    "text"
+   ],
+   [
+    "posture",
+    "text"
+   ],
+   [
+    "syllabus",
+    "text"
+   ],
+   [
+    "headnotes",
+    "text"
+   ],
+   [
+    "summary",
+    "text"
+   ],
+   [
+    "disposition",
+    "text"
+   ],
+   [
+    "history",
+    "text"
+   ],
+   [
+    "other_dates",
+    "text"
+   ],
+   [
+    "cross_reference",
+    "text"
+   ],
+   [
+    "correction",
+    "text"
+   ],
+   [
+    "citation_count",
+    "integer"
+   ],
+   [
+    "precedential_status",
+    "character varying(50)"
+   ],
+   [
+    "date_blocked",
+    "date"
+   ],
+   [
+    "blocked",
+    "boolean"
+   ],
+   [
+    "filepath_json_harvard",
+    "character varying(1000)"
+   ],
+   [
+    "docket_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "arguments",
+    "text"
+   ],
+   [
+    "headmatter",
+    "text"
+   ],
+   [
+    "filepath_pdf_harvard",
+    "character varying(100)"
+   ]
+  ],
+  "search_opinionclusternonparticipatingjudgesevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinioncluster_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ]
+  ],
+  "search_opinionclusterpanelevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinioncluster_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ]
+  ],
+  "search_opinionevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "author_str",
+    "text"
+   ],
+   [
+    "per_curiam",
+    "boolean"
+   ],
+   [
+    "joined_by_str",
+    "text"
+   ],
+   [
+    "type",
+    "character varying(20)"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "download_url",
+    "character varying(500)"
+   ],
+   [
+    "local_path",
+    "character varying(100)"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "html",
+    "text"
+   ],
+   [
+    "html_lawbox",
+    "text"
+   ],
+   [
+    "html_columbia",
+    "text"
+   ],
+   [
+    "html_anon_2020",
+    "text"
+   ],
+   [
+    "xml_harvard",
+    "text"
+   ],
+   [
+    "html_with_citations",
+    "text"
+   ],
+   [
+    "extracted_by_ocr",
+    "boolean"
+   ],
+   [
+    "author_id",
+    "integer"
+   ],
+   [
+    "cluster_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "ordering_key",
+    "integer"
+   ]
+  ],
+  "search_opinionjoinedbyevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "opinion_id",
+    "integer"
+   ],
+   [
+    "person_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ]
+  ],
+  "search_opinionscited": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "cited_opinion_id",
+    "integer"
+   ],
+   [
+    "citing_opinion_id",
+    "integer"
+   ],
+   [
+    "depth",
+    "integer"
+   ]
+  ],
+  "search_opinionscitedbyrecapdocument": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "depth",
+    "integer"
+   ],
+   [
+    "cited_opinion_id",
+    "integer"
+   ],
+   [
+    "citing_document_id",
+    "integer"
+   ]
+  ],
+  "search_originatingcourtinformation": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "assigned_to_str",
+    "text"
+   ],
+   [
+    "court_reporter",
+    "text"
+   ],
+   [
+    "date_disposed",
+    "date"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "date_judgment",
+    "date"
+   ],
+   [
+    "date_judgment_eod",
+    "date"
+   ],
+   [
+    "date_filed_noa",
+    "date"
+   ],
+   [
+    "date_received_coa",
+    "date"
+   ],
+   [
+    "assigned_to_id",
+    "integer"
+   ],
+   [
+    "docket_number",
+    "text"
+   ],
+   [
+    "ordering_judge_id",
+    "integer"
+   ],
+   [
+    "ordering_judge_str",
+    "text"
+   ]
+  ],
+  "search_originatingcourtinformationevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "docket_number",
+    "text"
+   ],
+   [
+    "assigned_to_str",
+    "text"
+   ],
+   [
+    "ordering_judge_str",
+    "text"
+   ],
+   [
+    "court_reporter",
+    "text"
+   ],
+   [
+    "date_disposed",
+    "date"
+   ],
+   [
+    "date_filed",
+    "date"
+   ],
+   [
+    "date_judgment",
+    "date"
+   ],
+   [
+    "date_judgment_eod",
+    "date"
+   ],
+   [
+    "date_filed_noa",
+    "date"
+   ],
+   [
+    "date_received_coa",
+    "date"
+   ],
+   [
+    "assigned_to_id",
+    "integer"
+   ],
+   [
+    "ordering_judge_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ],
+  "search_parenthetical": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "text",
+    "text"
+   ],
+   [
+    "score",
+    "double precision"
+   ],
+   [
+    "described_opinion_id",
+    "integer"
+   ],
+   [
+    "describing_opinion_id",
+    "integer"
+   ],
+   [
+    "group_id",
+    "integer"
+   ]
+  ],
+  "search_parentheticalgroup": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "score",
+    "double precision"
+   ],
+   [
+    "size",
+    "integer"
+   ],
+   [
+    "opinion_id",
+    "integer"
+   ],
+   [
+    "representative_id",
+    "integer"
+   ]
+  ],
+  "search_recapdocument": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "date_upload",
+    "timestamp with time zone"
+   ],
+   [
+    "document_type",
+    "integer"
+   ],
+   [
+    "document_number",
+    "character varying(32)"
+   ],
+   [
+    "attachment_number",
+    "smallint"
+   ],
+   [
+    "pacer_doc_id",
+    "character varying(64)"
+   ],
+   [
+    "is_available",
+    "boolean"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "docket_entry_id",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "ocr_status",
+    "smallint"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "is_free_on_pacer",
+    "boolean"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "file_size",
+    "integer"
+   ],
+   [
+    "thumbnail",
+    "character varying(100)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "is_sealed",
+    "boolean"
+   ],
+   [
+    "acms_document_guid",
+    "character varying(64)"
+   ]
+  ],
+  "search_recapdocument_tags": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "recapdocument_id",
+    "integer"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_recapdocumentevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "sha1",
+    "character varying(40)"
+   ],
+   [
+    "page_count",
+    "integer"
+   ],
+   [
+    "file_size",
+    "integer"
+   ],
+   [
+    "filepath_local",
+    "character varying(1000)"
+   ],
+   [
+    "filepath_ia",
+    "character varying(1000)"
+   ],
+   [
+    "ia_upload_failure_count",
+    "smallint"
+   ],
+   [
+    "thumbnail",
+    "character varying(100)"
+   ],
+   [
+    "thumbnail_status",
+    "smallint"
+   ],
+   [
+    "plain_text",
+    "text"
+   ],
+   [
+    "ocr_status",
+    "smallint"
+   ],
+   [
+    "date_upload",
+    "timestamp with time zone"
+   ],
+   [
+    "document_number",
+    "character varying(32)"
+   ],
+   [
+    "attachment_number",
+    "smallint"
+   ],
+   [
+    "pacer_doc_id",
+    "character varying(64)"
+   ],
+   [
+    "is_available",
+    "boolean"
+   ],
+   [
+    "is_free_on_pacer",
+    "boolean"
+   ],
+   [
+    "is_sealed",
+    "boolean"
+   ],
+   [
+    "document_type",
+    "integer"
+   ],
+   [
+    "description",
+    "text"
+   ],
+   [
+    "docket_entry_id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ],
+   [
+    "acms_document_guid",
+    "character varying(64)"
+   ]
+  ],
+  "search_recapdocumenttagsevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "recapdocument_id",
+    "integer"
+   ],
+   [
+    "tag_id",
+    "integer"
+   ]
+  ],
+  "search_searchquery": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "source",
+    "smallint"
+   ],
+   [
+    "get_params",
+    "text"
+   ],
+   [
+    "query_time_ms",
+    "integer"
+   ],
+   [
+    "hit_cache",
+    "boolean"
+   ],
+   [
+    "failed",
+    "boolean"
+   ],
+   [
+    "engine",
+    "smallint"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "user_id",
+    "integer"
+   ]
+  ],
+  "search_tag": [
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "character varying(50)"
+   ]
+  ],
+  "search_tagevent": [
+   [
+    "pgh_id",
+    "integer"
+   ],
+   [
+    "pgh_created_at",
+    "timestamp with time zone"
+   ],
+   [
+    "pgh_label",
+    "text"
+   ],
+   [
+    "id",
+    "integer"
+   ],
+   [
+    "date_created",
+    "timestamp with time zone"
+   ],
+   [
+    "date_modified",
+    "timestamp with time zone"
+   ],
+   [
+    "name",
+    "character varying(50)"
+   ],
+   [
+    "pgh_context_id",
+    "uuid"
+   ],
+   [
+    "pgh_obj_id",
+    "integer"
+   ]
+  ]
+ },
+ "match": {
+  "courthouses": {
+   "table": "search_courthouse",
+   "header": [
+    "id",
+    "court_seat",
+    "building_name",
+    "address1",
+    "address2",
+    "city",
+    "county",
+    "state",
+    "zip_code",
+    "country_code",
+    "court_id"
+   ]
+  },
+  "courts": {
+   "table": "search_court",
+   "header": [
+    "id",
+    "pacer_court_id",
+    "pacer_has_rss_feed",
+    "pacer_rss_entry_types",
+    "date_last_pacer_contact",
+    "fjc_court_id",
+    "date_modified",
+    "in_use",
+    "has_opinion_scraper",
+    "has_oral_argument_scraper",
+    "position",
+    "citation_string",
+    "short_name",
+    "full_name",
+    "url",
+    "start_date",
+    "end_date",
+    "jurisdiction",
+    "notes",
+    "parent_court_id"
+   ]
+  },
+  "financial-disclosures": {
+   "table": "disclosures_financialdisclosure",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "year",
+    "download_filepath",
+    "filepath",
+    "thumbnail",
+    "thumbnail_status",
+    "page_count",
+    "sha1",
+    "report_type",
+    "is_amended",
+    "addendum_content_raw",
+    "addendum_redacted",
+    "has_been_extracted",
+    "person_id"
+   ]
+  },
+  "financial-disclosures-agreements": {
+   "table": "disclosures_agreement",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "date_raw",
+    "parties_and_terms",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-debts": {
+   "table": "disclosures_debt",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "creditor_name",
+    "description",
+    "value_code",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-gifts": {
+   "table": "disclosures_gift",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "source",
+    "description",
+    "value",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-non-investment-income": {
+   "table": "disclosures_noninvestmentincome",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "date_raw",
+    "source_type",
+    "income_amount",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-positions": {
+   "table": "disclosures_position",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "position",
+    "organization_name",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-reimbursements": {
+   "table": "disclosures_reimbursement",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "source",
+    "date_raw",
+    "location",
+    "purpose",
+    "items_paid_or_provided",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "financial-disclosures-spousal-income": {
+   "table": "disclosures_spouseincome",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "source_type",
+    "date_raw",
+    "redacted",
+    "financial_disclosure_id"
+   ]
+  },
+  "oral-arguments": {
+   "table": [],
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "source",
+    "case_name_short",
+    "case_name",
+    "case_name_full",
+    "judges",
+    "sha1",
+    "download_url",
+    "local_path_mp3",
+    "local_path_original_file",
+    "filepath_ia",
+    "ia_upload_failure_count",
+    "duration",
+    "processing_complete",
+    "date_blocked",
+    "blocked",
+    "stt_status",
+    "stt_google_response",
+    "docket_id"
+   ]
+  },
+  "originating-court-information": {
+   "table": "search_originatingcourtinformation",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "docket_number",
+    "assigned_to_str",
+    "ordering_judge_str",
+    "court_reporter",
+    "date_disposed",
+    "date_filed",
+    "date_judgment",
+    "date_judgment_eod",
+    "date_filed_noa",
+    "date_received_coa",
+    "assigned_to_id",
+    "ordering_judge_id"
+   ]
+  },
+  "people-db-educations": {
+   "table": "people_db_education",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "degree_level",
+    "degree_detail",
+    "degree_year",
+    "person_id",
+    "school_id"
+   ]
+  },
+  "people-db-people": {
+   "table": "people_db_person",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "date_completed",
+    "fjc_id",
+    "slug",
+    "name_first",
+    "name_middle",
+    "name_last",
+    "name_suffix",
+    "date_dob",
+    "date_granularity_dob",
+    "date_dod",
+    "date_granularity_dod",
+    "dob_city",
+    "dob_state",
+    "dob_country",
+    "dod_city",
+    "dod_state",
+    "dod_country",
+    "gender",
+    "religion",
+    "ftm_total_received",
+    "ftm_eid",
+    "has_photo",
+    "is_alias_of_id"
+   ]
+  },
+  "people-db-political-affiliations": {
+   "table": "people_db_politicalaffiliation",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "political_party",
+    "source",
+    "date_start",
+    "date_granularity_start",
+    "date_end",
+    "date_granularity_end",
+    "person_id"
+   ]
+  },
+  "people-db-positions": {
+   "table": "people_db_position",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "position_type",
+    "job_title",
+    "sector",
+    "organization_name",
+    "location_city",
+    "location_state",
+    "date_nominated",
+    "date_elected",
+    "date_recess_appointment",
+    "date_referred_to_judicial_committee",
+    "date_judicial_committee_action",
+    "judicial_committee_action",
+    "date_hearing",
+    "date_confirmation",
+    "date_start",
+    "date_granularity_start",
+    "date_termination",
+    "termination_reason",
+    "date_granularity_termination",
+    "date_retirement",
+    "nomination_process",
+    "vote_type",
+    "voice_vote",
+    "votes_yes",
+    "votes_no",
+    "votes_yes_percent",
+    "votes_no_percent",
+    "how_selected",
+    "has_inferred_values",
+    "appointer_id",
+    "court_id",
+    "person_id",
+    "predecessor_id",
+    "school_id",
+    "supervisor_id"
+   ]
+  },
+  "people-db-races": {
+   "table": "people_db_person_race",
+   "header": [
+    "id",
+    "person_id",
+    "race_id"
+   ]
+  },
+  "people-db-retention-events": {
+   "table": "people_db_retentionevent",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "retention_type",
+    "date_retention",
+    "votes_yes",
+    "votes_no",
+    "votes_yes_percent",
+    "votes_no_percent",
+    "unopposed",
+    "won",
+    "position_id"
+   ]
+  },
+  "people-db-schools": {
+   "table": "people_db_school",
+   "header": [
+    "id",
+    "date_created",
+    "date_modified",
+    "name",
+    "ein",
+    "is_alias_of_id"
+   ]
+  },
+  "search_opinion_joined_by": {
+   "table": "search_opinion_joined_by",
+   "header": [
+    "id",
+    "opinion_id",
+    "person_id"
+   ]
+  },
+  "search_opinioncluster_panel": {
+   "table": [
+    "search_opinioncluster_non_participating_judges",
+    "search_opinioncluster_panel"
+   ],
+   "header": [
+    "id",
+    "opinioncluster_id",
+    "person_id"
+   ]
+  }
+ }
+}
