@@ -1,0 +1,2589 @@
+{
+  "source_snapshot": "2026-09-30",
+  "license_statement": {
+    "label": "Public Domain Mark",
+    "url": "https://www.courtlistener.com/help/api/bulk-data/",
+    "cc0_dedication": false
+  },
+  "sources": {
+    "people-db-retention-events": {
+      "date": "2026-09-30",
+      "size": 118,
+      "file": "people-db-retention-events-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-retention-events-2026-09-30.csv.bz2",
+      "etag": "\"214b529dc538d2960453ae55cb287aa0\"",
+      "last_modified": "2026-09-30T20:31:16.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:16 GMT",
+      "sha256": "93614f4ac9e1f63fd33e49b3706ff1a894a29a92fc6713a0122a6afe9151c74b",
+      "post_download_identity_verified": true
+    },
+    "search_opinion_joined_by": {
+      "date": "2026-09-30",
+      "size": 6184,
+      "file": "search_opinion_joined_by-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/search_opinion_joined_by-2026-09-30.csv.bz2",
+      "etag": "\"4a4f5ad599131539fdde988be308b97b\"",
+      "last_modified": "2026-09-30T20:20:58.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:20:58 GMT",
+      "sha256": "b871e07bb80140377d7f3180a56c020c576570276fd91c0144a4e17d6e42dfe1",
+      "post_download_identity_verified": true
+    },
+    "courthouses": {
+      "date": "2026-09-30",
+      "size": 17268,
+      "file": "courthouses-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/courthouses-2026-09-30.csv.bz2",
+      "etag": "\"7986edd8f9b0d6bbd13166e640e824d5\"",
+      "last_modified": "2026-09-30T20:20:59.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:20:59 GMT",
+      "sha256": "ba6b39442687d6be453b01e50f1a3e1e2fe28f270eb44305f94364dc8b8ed102",
+      "post_download_identity_verified": true
+    },
+    "load-bulk-data": {
+      "date": "2026-09-30",
+      "size": 18610,
+      "file": "load-bulk-data-2026-09-30.sh",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/load-bulk-data-2026-09-30.sh",
+      "etag": "\"12ec8449a77db2b26c911c7401426cec\"",
+      "last_modified": "2026-09-30T20:33:19.000Z",
+      "sha256": "3c3a44d9fa23b1bd61a50e9cba8833fc78b13afcc522436b90ba8bb87c0f85b4",
+      "last_modified_http": "Wed, 30 Sep 2026 20:33:19 GMT",
+      "cache_verified": true
+    },
+    "people-db-races": {
+      "date": "2026-09-30",
+      "size": 25734,
+      "file": "people-db-races-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-races-2026-09-30.csv.bz2",
+      "etag": "\"ff37d653a1d6ab9f394583e47af5dd2b\"",
+      "last_modified": "2026-09-30T20:31:18.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:18 GMT",
+      "sha256": "8b1d588cf94795706de805be3d232daa23f3e7f0460262adbd9d1826ba993844",
+      "post_download_identity_verified": true
+    },
+    "people-db-schools": {
+      "date": "2026-09-30",
+      "size": 65991,
+      "file": "people-db-schools-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-schools-2026-09-30.csv.bz2",
+      "etag": "\"7b84eaef72db877caad7e035cf331730\"",
+      "last_modified": "2026-09-30T09:00:24.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 09:00:24 GMT",
+      "sha256": "c9f95708b1fcbc98c47b1d293ee21a1f5d3df55820de6992a3f698615d5dbffd",
+      "post_download_identity_verified": true
+    },
+    "financial-disclosures-gifts": {
+      "date": "2026-09-30",
+      "size": 68178,
+      "file": "financial-disclosures-gifts-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-gifts-2026-09-30.csv.bz2",
+      "etag": "\"24f9d6b3c2d3668cc18c3806a3fba3b5\"",
+      "last_modified": "2026-09-30T20:31:47.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:47 GMT",
+      "sha256": "81738829cff941b710e2dc8523e595d7092459c16858a30b5fbb9230147fec6b",
+      "post_download_identity_verified": true
+    },
+    "courts": {
+      "date": "2026-09-30",
+      "size": 81226,
+      "file": "courts-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/courts-2026-09-30.csv.bz2",
+      "etag": "\"3408dd2c7196d565d2ac2cc06f7f830b\"",
+      "last_modified": "2026-09-30T09:00:24.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 09:00:24 GMT",
+      "sha256": "f33e4c12e5a1d73574f7ecaafa8676887321dccae3ea29cc91d6a5935508baf3",
+      "post_download_identity_verified": true
+    },
+    "people-db-political-affiliations": {
+      "date": "2026-09-30",
+      "size": 130643,
+      "file": "people-db-political-affiliations-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-political-affiliations-2026-09-30.csv.bz2",
+      "etag": "\"996fcaf4ab32366ffcbb1ff60183f132\"",
+      "last_modified": "2026-09-30T20:31:17.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:17 GMT",
+      "sha256": "5c23bbd0085d8991529bdde341440e324e87fe2d051392c237a1e38cc594610d",
+      "post_download_identity_verified": true
+    },
+    "people-db-educations": {
+      "date": "2026-09-30",
+      "size": 213281,
+      "file": "people-db-educations-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-educations-2026-09-30.csv.bz2",
+      "etag": "\"3432b5f244b92322c22816f0a78a9db8\"",
+      "last_modified": "2026-09-30T20:31:17.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:17 GMT",
+      "sha256": "e84c16d8a0e975cd6b70101aecf2a1338e5efebd7ce60f90c785b7e25156f69d",
+      "post_download_identity_verified": true
+    },
+    "financial-disclosures-agreements": {
+      "date": "2026-09-30",
+      "size": 318103,
+      "file": "financial-disclosures-agreements-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-agreements-2026-09-30.csv.bz2",
+      "etag": "\"90fe064ff8a1b8748d0b97f5a4d19c08\"",
+      "last_modified": "2026-09-30T20:31:44.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:44 GMT",
+      "sha256": "200c4974d058acac98030303416095b0143545ec0cf81752bfc391e88f199309",
+      "post_download_identity_verified": true
+    },
+    "financial-disclosures-debts": {
+      "date": "2026-09-30",
+      "size": 393432,
+      "file": "financial-disclosures-debts-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-debts-2026-09-30.csv.bz2",
+      "etag": "\"7e9bdc4bd967e01b50d6b7eb65a13ec6\"",
+      "last_modified": "2026-09-30T20:31:48.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:48 GMT",
+      "sha256": "4af99e6bdf975261bef97f2794f1d6470531ad6e6bf0abf307e8b56a8e9f0783",
+      "post_download_identity_verified": true
+    },
+    "financial-disclosures-non-investment-income": {
+      "date": "2026-09-30",
+      "size": 441242,
+      "file": "financial-disclosures-non-investment-income-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-non-investment-income-2026-09-30.csv.bz2",
+      "etag": "\"006777feca07c988eaa85b1c48929ae6\"",
+      "last_modified": "2026-09-30T20:31:45.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:45 GMT",
+      "sha256": "42d1846b4f2c23f516d8c4302e213b3ab6c76ecd0a4babafad646da1f9ae5084",
+      "post_download_identity_verified": true
+    },
+    "people-db-people": {
+      "date": "2026-09-30",
+      "size": 456021,
+      "file": "people-db-people-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-people-2026-09-30.csv.bz2",
+      "etag": "\"ef9693f7775e16c49eb70b11df84a260\"",
+      "last_modified": "2026-09-30T09:00:22.000Z",
+      "sha256": "acc965c0e45cea24d37f45098850be599ef77b8c547cde5faa38e0d2d181ecc5",
+      "last_modified_http": "Wed, 30 Sep 2026 09:00:22 GMT",
+      "cache_verified": true
+    },
+    "financial-disclosures-spousal-income": {
+      "date": "2026-09-30",
+      "size": 515573,
+      "file": "financial-disclosures-spousal-income-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-spousal-income-2026-09-30.csv.bz2",
+      "etag": "\"fffadfc603192ccab2722109dd79e6ce\"",
+      "last_modified": "2026-09-30T20:31:46.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:46 GMT",
+      "sha256": "a934538c22514fc704e45a8cfea3fcc3b6f09eecbfa2f116282cdb7bd21b9f24",
+      "post_download_identity_verified": true
+    },
+    "schema": {
+      "date": "2026-09-30",
+      "size": 555339,
+      "file": "schema-2026-09-30.sql",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/schema-2026-09-30.sql",
+      "etag": "\"2490469f496949d8d3e32e85fefd5408\"",
+      "last_modified": "2026-09-30T20:33:19.000Z",
+      "sha256": "c43db7879ecb64a79089db5a12467c4f218b195064e787b943878be947aa061f",
+      "last_modified_http": "Wed, 30 Sep 2026 20:33:19 GMT",
+      "cache_verified": true
+    },
+    "financial-disclosures-positions": {
+      "date": "2026-09-30",
+      "size": 915384,
+      "file": "financial-disclosures-positions-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-positions-2026-09-30.csv.bz2",
+      "etag": "\"5fe455404a72fe09be319146b25aba8b\"",
+      "last_modified": "2026-09-30T20:31:44.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:44 GMT",
+      "sha256": "7c96b16f4687b10d6ca1d34c6ef150c2110b524e7b24c50e07060d4dd98d9646",
+      "post_download_identity_verified": true
+    },
+    "people-db-positions": {
+      "date": "2026-09-30",
+      "size": 1047222,
+      "file": "people-db-positions-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/people-db-positions-2026-09-30.csv.bz2",
+      "etag": "\"027382845576435e1a0488c0bcdc9dea\"",
+      "last_modified": "2026-09-30T09:00:25.000Z",
+      "sha256": "b67855ef17125a1bd2b9b88b47e8fa543e603e8bbcca7658c63b1906e4e5f92f",
+      "last_modified_http": "Wed, 30 Sep 2026 09:00:25 GMT",
+      "cache_verified": true
+    },
+    "financial-disclosures-reimbursements": {
+      "date": "2026-09-30",
+      "size": 1138508,
+      "file": "financial-disclosures-reimbursements-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-reimbursements-2026-09-30.csv.bz2",
+      "etag": "\"4bea44b8e1a1c8aee9ec365c4cc9cb53\"",
+      "last_modified": "2026-09-30T20:31:47.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:47 GMT",
+      "sha256": "2f97c8211d48529d211f24366dd967f7c5b3bcc8630f183d6e81d59bdd86a0cd",
+      "post_download_identity_verified": true
+    },
+    "search_opinioncluster_panel": {
+      "date": "2026-09-30",
+      "size": 4965939,
+      "file": "search_opinioncluster_panel-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/search_opinioncluster_panel-2026-09-30.csv.bz2",
+      "etag": "\"8369acf2ffce4ec2fceacd53d22a9f68\"",
+      "last_modified": "2026-09-30T09:55:19.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 09:55:19 GMT",
+      "sha256": "4435fd23841d4272304928f2b9bb10192cacb09db67d38b80f4920491f6fe823",
+      "post_download_identity_verified": true
+    },
+    "financial-disclosures": {
+      "date": "2026-09-30",
+      "size": 5635744,
+      "file": "financial-disclosures-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/financial-disclosures-2026-09-30.csv.bz2",
+      "etag": "\"77545d9ccc418a8ccf5228ca41f24785\"",
+      "last_modified": "2026-09-30T20:31:20.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:31:20 GMT",
+      "sha256": "cb0c7e7194462392395e10e38456dfa265978ebfefdd0bd125568cf4481f8f9e",
+      "post_download_identity_verified": true
+    },
+    "originating-court-information": {
+      "date": "2026-09-30",
+      "size": 22541446,
+      "file": "originating-court-information-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/originating-court-information-2026-09-30.csv.bz2",
+      "etag": "\"29334f556957e144e62e2b8b8135fb9a-3\"",
+      "last_modified": "2026-09-30T09:03:33.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 09:03:33 GMT",
+      "sha256": "422f0e413d21b8b6592c7fdbb8fba215c98492f6ab48764e6bb93f6cbc61e634",
+      "post_download_identity_verified": true
+    },
+    "oral-arguments": {
+      "date": "2026-09-30",
+      "size": 691880446,
+      "file": "oral-arguments-2026-09-30.csv.bz2",
+      "url": "https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/bulk-data/oral-arguments-2026-09-30.csv.bz2",
+      "etag": "\"6d6eb546178d83ac9e2e902dc9b1a5dd-83\"",
+      "last_modified": "2026-09-30T20:27:55.000Z",
+      "last_modified_http": "Wed, 30 Sep 2026 20:27:55 GMT",
+      "sha256": "1d4705b978e4b4dcc1c080d236385d961eb2878ff2230dd7c173e7bfe607dbf5",
+      "post_download_identity_verified": true
+    }
+  },
+  "dictionary_sha256": "a3dcf99e1d412e8269d9ecb9f1396ece1161e92144e85bc14046ce2cc1c0e546",
+  "validation": {
+    "status": "validated",
+    "utc": "2026-10-18T00:51:04.507201+00:00",
+    "bytes": 3251122176,
+    "sha256": "71c9f6e11e4d17cdebae91206ed403baa57bb6c519e1f9ab3799a59ab1fa45fb",
+    "counts": {
+      "judges": {
+        "old": 16190,
+        "new": 16191,
+        "delta": 1,
+        "source_records": 16191
+      },
+      "positions": {
+        "old": 51289,
+        "new": 51291,
+        "delta": 2,
+        "source_records": 51291
+      },
+      "educations": {
+        "old": 12777,
+        "new": 12777,
+        "delta": 0,
+        "source_records": 12777
+      },
+      "schools": {
+        "old": 6011,
+        "new": 6011,
+        "delta": 0,
+        "source_records": 6011
+      },
+      "political_affiliations": {
+        "old": 8486,
+        "new": 8486,
+        "delta": 0,
+        "source_records": 8486
+      },
+      "judge_races": {
+        "old": 6542,
+        "new": 6542,
+        "delta": 0,
+        "source_records": 6542
+      },
+      "courts": {
+        "old": 3353,
+        "new": 3361,
+        "delta": 8,
+        "source_records": 3361
+      },
+      "courthouses": {
+        "old": 3352,
+        "new": 3361,
+        "delta": 9,
+        "source_records": 3361
+      },
+      "originating_court_information": {
+        "old": 38926,
+        "new": 1060419,
+        "delta": 1021493,
+        "source_records": 1060419
+      },
+      "financial_disclosures": {
+        "old": 32336,
+        "new": 32336,
+        "delta": 0,
+        "source_records": 32336
+      },
+      "disclosure_agreements": {
+        "old": 10007,
+        "new": 10007,
+        "delta": 0,
+        "source_records": 10007
+      },
+      "disclosure_debts": {
+        "old": 18775,
+        "new": 18775,
+        "delta": 0,
+        "source_records": 18775
+      },
+      "disclosure_gifts": {
+        "old": 2025,
+        "new": 2025,
+        "delta": 0,
+        "source_records": 2025
+      },
+      "disclosure_non_investment_income": {
+        "old": 15302,
+        "new": 15302,
+        "delta": 0,
+        "source_records": 15302
+      },
+      "disclosure_positions": {
+        "old": 37050,
+        "new": 37050,
+        "delta": 0,
+        "source_records": 37050
+      },
+      "disclosure_reimbursements": {
+        "old": 33472,
+        "new": 33472,
+        "delta": 0,
+        "source_records": 33472
+      },
+      "disclosure_spousal_income": {
+        "old": 20174,
+        "new": 20174,
+        "delta": 0,
+        "source_records": 20174
+      },
+      "oral_arguments": {
+        "old": 89468,
+        "new": 103710,
+        "delta": 14242,
+        "source_records": 103710
+      },
+      "opinion_cluster_panel": {
+        "old": 831965,
+        "new": 835616,
+        "delta": 3651,
+        "source_records": 835616
+      },
+      "opinion_joined_by": {
+        "old": 1028,
+        "new": 1028,
+        "delta": 0,
+        "source_records": 1028
+      }
+    },
+    "total_rows": 2277934,
+    "tables": 20,
+    "schemas": {
+      "judges": {
+        "legacy_columns": 26,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "date_completed",
+            "TIMESTAMP"
+          ],
+          [
+            "fjc_id",
+            "INTEGER"
+          ],
+          [
+            "slug",
+            "VARCHAR"
+          ],
+          [
+            "name_first",
+            "VARCHAR"
+          ],
+          [
+            "name_middle",
+            "VARCHAR"
+          ],
+          [
+            "name_last",
+            "VARCHAR"
+          ],
+          [
+            "name_suffix",
+            "VARCHAR"
+          ],
+          [
+            "date_dob",
+            "DATE"
+          ],
+          [
+            "date_granularity_dob",
+            "VARCHAR"
+          ],
+          [
+            "date_dod",
+            "DATE"
+          ],
+          [
+            "date_granularity_dod",
+            "VARCHAR"
+          ],
+          [
+            "dob_city",
+            "VARCHAR"
+          ],
+          [
+            "dob_state",
+            "VARCHAR"
+          ],
+          [
+            "dob_country",
+            "VARCHAR"
+          ],
+          [
+            "dod_city",
+            "VARCHAR"
+          ],
+          [
+            "dod_state",
+            "VARCHAR"
+          ],
+          [
+            "dod_country",
+            "VARCHAR"
+          ],
+          [
+            "gender",
+            "VARCHAR"
+          ],
+          [
+            "religion",
+            "VARCHAR"
+          ],
+          [
+            "ftm_total_received",
+            "DOUBLE"
+          ],
+          [
+            "ftm_eid",
+            "VARCHAR"
+          ],
+          [
+            "has_photo",
+            "BOOLEAN"
+          ],
+          [
+            "is_alias_of_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "positions": {
+        "legacy_columns": 38,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "position_type",
+            "VARCHAR"
+          ],
+          [
+            "job_title",
+            "VARCHAR"
+          ],
+          [
+            "sector",
+            "INTEGER"
+          ],
+          [
+            "organization_name",
+            "VARCHAR"
+          ],
+          [
+            "location_city",
+            "VARCHAR"
+          ],
+          [
+            "location_state",
+            "VARCHAR"
+          ],
+          [
+            "date_nominated",
+            "DATE"
+          ],
+          [
+            "date_elected",
+            "DATE"
+          ],
+          [
+            "date_recess_appointment",
+            "DATE"
+          ],
+          [
+            "date_referred_to_judicial_committee",
+            "DATE"
+          ],
+          [
+            "date_judicial_committee_action",
+            "DATE"
+          ],
+          [
+            "judicial_committee_action",
+            "VARCHAR"
+          ],
+          [
+            "date_hearing",
+            "DATE"
+          ],
+          [
+            "date_confirmation",
+            "DATE"
+          ],
+          [
+            "date_start",
+            "DATE"
+          ],
+          [
+            "date_granularity_start",
+            "VARCHAR"
+          ],
+          [
+            "date_termination",
+            "DATE"
+          ],
+          [
+            "termination_reason",
+            "VARCHAR"
+          ],
+          [
+            "date_granularity_termination",
+            "VARCHAR"
+          ],
+          [
+            "date_retirement",
+            "DATE"
+          ],
+          [
+            "nomination_process",
+            "VARCHAR"
+          ],
+          [
+            "vote_type",
+            "VARCHAR"
+          ],
+          [
+            "voice_vote",
+            "BOOLEAN"
+          ],
+          [
+            "votes_yes",
+            "INTEGER"
+          ],
+          [
+            "votes_no",
+            "INTEGER"
+          ],
+          [
+            "votes_yes_percent",
+            "DOUBLE"
+          ],
+          [
+            "votes_no_percent",
+            "DOUBLE"
+          ],
+          [
+            "how_selected",
+            "VARCHAR"
+          ],
+          [
+            "has_inferred_values",
+            "BOOLEAN"
+          ],
+          [
+            "appointer_id",
+            "INTEGER"
+          ],
+          [
+            "court_id",
+            "VARCHAR"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ],
+          [
+            "predecessor_id",
+            "INTEGER"
+          ],
+          [
+            "school_id",
+            "INTEGER"
+          ],
+          [
+            "supervisor_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "educations": {
+        "legacy_columns": 8,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "degree_level",
+            "VARCHAR"
+          ],
+          [
+            "degree_detail",
+            "VARCHAR"
+          ],
+          [
+            "degree_year",
+            "INTEGER"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ],
+          [
+            "school_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "schools": {
+        "legacy_columns": 6,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "name",
+            "VARCHAR"
+          ],
+          [
+            "ein",
+            "INTEGER"
+          ],
+          [
+            "is_alias_of_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "political_affiliations": {
+        "legacy_columns": 10,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "political_party",
+            "VARCHAR"
+          ],
+          [
+            "source",
+            "VARCHAR"
+          ],
+          [
+            "date_start",
+            "DATE"
+          ],
+          [
+            "date_granularity_start",
+            "VARCHAR"
+          ],
+          [
+            "date_end",
+            "DATE"
+          ],
+          [
+            "date_granularity_end",
+            "VARCHAR"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "judge_races": {
+        "legacy_columns": 4,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ],
+          [
+            "race_id",
+            "INTEGER"
+          ],
+          [
+            "race",
+            "VARCHAR"
+          ]
+        ]
+      },
+      "courts": {
+        "legacy_columns": 20,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "VARCHAR"
+          ],
+          [
+            "pacer_court_id",
+            "INTEGER"
+          ],
+          [
+            "pacer_has_rss_feed",
+            "BOOLEAN"
+          ],
+          [
+            "pacer_rss_entry_types",
+            "VARCHAR"
+          ],
+          [
+            "date_last_pacer_contact",
+            "TIMESTAMP"
+          ],
+          [
+            "fjc_court_id",
+            "VARCHAR"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "in_use",
+            "BOOLEAN"
+          ],
+          [
+            "has_opinion_scraper",
+            "BOOLEAN"
+          ],
+          [
+            "has_oral_argument_scraper",
+            "BOOLEAN"
+          ],
+          [
+            "position",
+            "DOUBLE"
+          ],
+          [
+            "citation_string",
+            "VARCHAR"
+          ],
+          [
+            "short_name",
+            "VARCHAR"
+          ],
+          [
+            "full_name",
+            "VARCHAR"
+          ],
+          [
+            "url",
+            "VARCHAR"
+          ],
+          [
+            "start_date",
+            "DATE"
+          ],
+          [
+            "end_date",
+            "DATE"
+          ],
+          [
+            "jurisdiction",
+            "VARCHAR"
+          ],
+          [
+            "notes",
+            "VARCHAR"
+          ],
+          [
+            "parent_court_id",
+            "VARCHAR"
+          ]
+        ]
+      },
+      "courthouses": {
+        "legacy_columns": 11,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "court_seat",
+            "BOOLEAN"
+          ],
+          [
+            "building_name",
+            "VARCHAR"
+          ],
+          [
+            "address1",
+            "VARCHAR"
+          ],
+          [
+            "address2",
+            "VARCHAR"
+          ],
+          [
+            "city",
+            "VARCHAR"
+          ],
+          [
+            "county",
+            "VARCHAR"
+          ],
+          [
+            "state",
+            "VARCHAR"
+          ],
+          [
+            "zip_code",
+            "VARCHAR"
+          ],
+          [
+            "country_code",
+            "VARCHAR"
+          ],
+          [
+            "court_id",
+            "VARCHAR"
+          ]
+        ]
+      },
+      "originating_court_information": {
+        "legacy_columns": 15,
+        "new_columns": [
+          [
+            "docket_number_raw",
+            "VARCHAR"
+          ]
+        ],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "docket_number",
+            "VARCHAR"
+          ],
+          [
+            "assigned_to_str",
+            "VARCHAR"
+          ],
+          [
+            "ordering_judge_str",
+            "VARCHAR"
+          ],
+          [
+            "court_reporter",
+            "VARCHAR"
+          ],
+          [
+            "date_disposed",
+            "DATE"
+          ],
+          [
+            "date_filed",
+            "DATE"
+          ],
+          [
+            "date_judgment",
+            "DATE"
+          ],
+          [
+            "date_judgment_eod",
+            "DATE"
+          ],
+          [
+            "date_filed_noa",
+            "DATE"
+          ],
+          [
+            "date_received_coa",
+            "DATE"
+          ],
+          [
+            "assigned_to_id",
+            "INTEGER"
+          ],
+          [
+            "ordering_judge_id",
+            "INTEGER"
+          ],
+          [
+            "docket_number_raw",
+            "VARCHAR"
+          ]
+        ]
+      },
+      "financial_disclosures": {
+        "legacy_columns": 16,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "year",
+            "INTEGER"
+          ],
+          [
+            "download_filepath",
+            "VARCHAR"
+          ],
+          [
+            "filepath",
+            "VARCHAR"
+          ],
+          [
+            "thumbnail",
+            "VARCHAR"
+          ],
+          [
+            "thumbnail_status",
+            "INTEGER"
+          ],
+          [
+            "page_count",
+            "INTEGER"
+          ],
+          [
+            "sha1",
+            "VARCHAR"
+          ],
+          [
+            "report_type",
+            "INTEGER"
+          ],
+          [
+            "is_amended",
+            "BOOLEAN"
+          ],
+          [
+            "addendum_content_raw",
+            "VARCHAR"
+          ],
+          [
+            "addendum_redacted",
+            "BOOLEAN"
+          ],
+          [
+            "has_been_extracted",
+            "BOOLEAN"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_agreements": {
+        "legacy_columns": 7,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "date_raw",
+            "VARCHAR"
+          ],
+          [
+            "parties_and_terms",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_debts": {
+        "legacy_columns": 8,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "creditor_name",
+            "VARCHAR"
+          ],
+          [
+            "description",
+            "VARCHAR"
+          ],
+          [
+            "value_code",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_gifts": {
+        "legacy_columns": 8,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "source",
+            "VARCHAR"
+          ],
+          [
+            "description",
+            "VARCHAR"
+          ],
+          [
+            "value",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_non_investment_income": {
+        "legacy_columns": 8,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "date_raw",
+            "VARCHAR"
+          ],
+          [
+            "source_type",
+            "VARCHAR"
+          ],
+          [
+            "income_amount",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_positions": {
+        "legacy_columns": 7,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "position",
+            "VARCHAR"
+          ],
+          [
+            "organization_name",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_reimbursements": {
+        "legacy_columns": 10,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "source",
+            "VARCHAR"
+          ],
+          [
+            "date_raw",
+            "VARCHAR"
+          ],
+          [
+            "location",
+            "VARCHAR"
+          ],
+          [
+            "purpose",
+            "VARCHAR"
+          ],
+          [
+            "items_paid_or_provided",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "disclosure_spousal_income": {
+        "legacy_columns": 7,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "source_type",
+            "VARCHAR"
+          ],
+          [
+            "date_raw",
+            "VARCHAR"
+          ],
+          [
+            "redacted",
+            "BOOLEAN"
+          ],
+          [
+            "financial_disclosure_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "oral_arguments": {
+        "legacy_columns": 21,
+        "new_columns": [
+          [
+            "stt_transcript",
+            "VARCHAR"
+          ],
+          [
+            "stt_source",
+            "INTEGER"
+          ]
+        ],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "date_created",
+            "TIMESTAMP"
+          ],
+          [
+            "date_modified",
+            "TIMESTAMP"
+          ],
+          [
+            "source",
+            "VARCHAR"
+          ],
+          [
+            "case_name_short",
+            "VARCHAR"
+          ],
+          [
+            "case_name",
+            "VARCHAR"
+          ],
+          [
+            "case_name_full",
+            "VARCHAR"
+          ],
+          [
+            "judges",
+            "VARCHAR"
+          ],
+          [
+            "sha1",
+            "VARCHAR"
+          ],
+          [
+            "download_url",
+            "VARCHAR"
+          ],
+          [
+            "local_path_mp3",
+            "VARCHAR"
+          ],
+          [
+            "local_path_original_file",
+            "VARCHAR"
+          ],
+          [
+            "filepath_ia",
+            "VARCHAR"
+          ],
+          [
+            "ia_upload_failure_count",
+            "INTEGER"
+          ],
+          [
+            "duration",
+            "INTEGER"
+          ],
+          [
+            "processing_complete",
+            "BOOLEAN"
+          ],
+          [
+            "date_blocked",
+            "DATE"
+          ],
+          [
+            "blocked",
+            "BOOLEAN"
+          ],
+          [
+            "stt_status",
+            "INTEGER"
+          ],
+          [
+            "stt_google_response",
+            "VARCHAR"
+          ],
+          [
+            "docket_id",
+            "INTEGER"
+          ],
+          [
+            "stt_transcript",
+            "VARCHAR"
+          ],
+          [
+            "stt_source",
+            "INTEGER"
+          ]
+        ]
+      },
+      "opinion_cluster_panel": {
+        "legacy_columns": 3,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "opinioncluster_id",
+            "INTEGER"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ]
+        ]
+      },
+      "opinion_joined_by": {
+        "legacy_columns": 3,
+        "new_columns": [],
+        "columns": [
+          [
+            "id",
+            "INTEGER"
+          ],
+          [
+            "opinion_id",
+            "INTEGER"
+          ],
+          [
+            "person_id",
+            "INTEGER"
+          ]
+        ]
+      }
+    },
+    "dates": {
+      "position_start": [
+        "0217-08-11",
+        "2024-12-31"
+      ],
+      "judge_modified": [
+        "2016-04-26 03:03:21.302131",
+        "2026-09-29 21:52:36.951211"
+      ],
+      "oral_modified": [
+        "2019-07-19 09:34:33.798845",
+        "2026-09-30 18:54:52.272569"
+      ],
+      "disclosure_years": [
+        1987,
+        2022
+      ]
+    },
+    "transcripts": {
+      "oral_rows": 103710,
+      "populated_transcripts": 103418,
+      "max_characters": 154202,
+      "total_characters": 2977814359,
+      "source_codes_populated": 103419,
+      "independent_sample_records": 32,
+      "sample_sha256": "25583d98a015cfcecc10b6d5437a32dcba573ec21d31e16a674400bf40af7312"
+    },
+    "queries": {
+      "judges": [
+        16191,
+        3711
+      ],
+      "view_rows": 51291,
+      "court_jurisdictions": [
+        [
+          "C",
+          5
+        ],
+        [
+          "F",
+          127
+        ],
+        [
+          "FB",
+          95
+        ],
+        [
+          "FBP",
+          8
+        ],
+        [
+          "FD",
+          125
+        ],
+        [
+          "FS",
+          42
+        ],
+        [
+          "I",
+          3
+        ],
+        [
+          "MA",
+          11
+        ],
+        [
+          "S",
+          55
+        ],
+        [
+          "SA",
+          111
+        ],
+        [
+          "SAG",
+          16
+        ],
+        [
+          "SS",
+          86
+        ],
+        [
+          "ST",
+          2618
+        ],
+        [
+          "St",
+          1
+        ],
+        [
+          "T",
+          2
+        ],
+        [
+          "TA",
+          2
+        ],
+        [
+          "TRA",
+          18
+        ],
+        [
+          "TRS",
+          6
+        ],
+        [
+          "TRT",
+          14
+        ],
+        [
+          "TRX",
+          4
+        ],
+        [
+          "TS",
+          5
+        ],
+        [
+          "TT",
+          6
+        ],
+        [
+          null,
+          1
+        ]
+      ],
+      "disclosure_year_counts": [
+        [
+          1987,
+          5
+        ],
+        [
+          1988,
+          4
+        ],
+        [
+          1989,
+          20
+        ],
+        [
+          1990,
+          53
+        ],
+        [
+          1991,
+          27
+        ],
+        [
+          1992,
+          34
+        ],
+        [
+          1993,
+          51
+        ],
+        [
+          1994,
+          29
+        ],
+        [
+          1995,
+          10
+        ],
+        [
+          1996,
+          26
+        ],
+        [
+          1997,
+          21
+        ],
+        [
+          1998,
+          18
+        ],
+        [
+          1999,
+          21
+        ],
+        [
+          2000,
+          62
+        ],
+        [
+          2001,
+          45
+        ],
+        [
+          2002,
+          33
+        ],
+        [
+          2003,
+          1018
+        ],
+        [
+          2004,
+          1025
+        ],
+        [
+          2005,
+          1186
+        ],
+        [
+          2006,
+          1189
+        ],
+        [
+          2007,
+          1185
+        ],
+        [
+          2008,
+          1136
+        ],
+        [
+          2009,
+          1163
+        ],
+        [
+          2010,
+          1103
+        ],
+        [
+          2011,
+          2515
+        ],
+        [
+          2012,
+          2399
+        ],
+        [
+          2013,
+          2394
+        ],
+        [
+          2014,
+          2330
+        ],
+        [
+          2015,
+          2360
+        ],
+        [
+          2016,
+          2283
+        ],
+        [
+          2017,
+          2256
+        ],
+        [
+          2018,
+          2296
+        ],
+        [
+          2019,
+          2254
+        ],
+        [
+          2020,
+          1759
+        ],
+        [
+          2021,
+          14
+        ],
+        [
+          2022,
+          12
+        ]
+      ],
+      "positions_null_type": 21225,
+      "transcript_sources": [
+        [
+          1,
+          103419
+        ],
+        [
+          null,
+          291
+        ]
+      ],
+      "fjc_match": 3710
+    },
+    "source_files_verified": 23,
+    "load_audit": {
+      "status": "validated",
+      "tables": {
+        "people-db-people": {
+          "table": "judges",
+          "source_records": 16191,
+          "table_rows": 16191,
+          "batches": 2,
+          "uncompressed_bytes": 3371678,
+          "escape": "\\",
+          "source_sha256": "acc965c0e45cea24d37f45098850be599ef77b8c547cde5faa38e0d2d181ecc5",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "date_completed": "TIMESTAMP",
+            "fjc_id": "INTEGER",
+            "slug": "VARCHAR",
+            "name_first": "VARCHAR",
+            "name_middle": "VARCHAR",
+            "name_last": "VARCHAR",
+            "name_suffix": "VARCHAR",
+            "date_dob": "DATE",
+            "date_granularity_dob": "VARCHAR",
+            "date_dod": "DATE",
+            "date_granularity_dod": "VARCHAR",
+            "dob_city": "VARCHAR",
+            "dob_state": "VARCHAR",
+            "dob_country": "VARCHAR",
+            "dod_city": "VARCHAR",
+            "dod_state": "VARCHAR",
+            "dod_country": "VARCHAR",
+            "gender": "VARCHAR",
+            "religion": "VARCHAR",
+            "ftm_total_received": "DOUBLE",
+            "ftm_eid": "VARCHAR",
+            "has_photo": "BOOLEAN",
+            "is_alias_of_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-positions": {
+          "table": "positions",
+          "source_records": 51291,
+          "table_rows": 51291,
+          "batches": 6,
+          "uncompressed_bytes": 10324149,
+          "escape": "\\",
+          "source_sha256": "b67855ef17125a1bd2b9b88b47e8fa543e603e8bbcca7658c63b1906e4e5f92f",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "position_type": "VARCHAR",
+            "job_title": "VARCHAR",
+            "sector": "INTEGER",
+            "organization_name": "VARCHAR",
+            "location_city": "VARCHAR",
+            "location_state": "VARCHAR",
+            "date_nominated": "DATE",
+            "date_elected": "DATE",
+            "date_recess_appointment": "DATE",
+            "date_referred_to_judicial_committee": "DATE",
+            "date_judicial_committee_action": "DATE",
+            "judicial_committee_action": "VARCHAR",
+            "date_hearing": "DATE",
+            "date_confirmation": "DATE",
+            "date_start": "DATE",
+            "date_granularity_start": "VARCHAR",
+            "date_termination": "DATE",
+            "termination_reason": "VARCHAR",
+            "date_granularity_termination": "VARCHAR",
+            "date_retirement": "DATE",
+            "nomination_process": "VARCHAR",
+            "vote_type": "VARCHAR",
+            "voice_vote": "BOOLEAN",
+            "votes_yes": "INTEGER",
+            "votes_no": "INTEGER",
+            "votes_yes_percent": "DOUBLE",
+            "votes_no_percent": "DOUBLE",
+            "how_selected": "VARCHAR",
+            "has_inferred_values": "BOOLEAN",
+            "appointer_id": "INTEGER",
+            "court_id": "VARCHAR",
+            "person_id": "INTEGER",
+            "predecessor_id": "INTEGER",
+            "school_id": "INTEGER",
+            "supervisor_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-educations": {
+          "table": "educations",
+          "source_records": 12777,
+          "table_rows": 12777,
+          "batches": 2,
+          "uncompressed_bytes": 1287952,
+          "escape": "\\",
+          "source_sha256": "e84c16d8a0e975cd6b70101aecf2a1338e5efebd7ce60f90c785b7e25156f69d",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "degree_level": "VARCHAR",
+            "degree_detail": "VARCHAR",
+            "degree_year": "INTEGER",
+            "person_id": "INTEGER",
+            "school_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-schools": {
+          "table": "schools",
+          "source_records": 6011,
+          "table_rows": 6011,
+          "batches": 1,
+          "uncompressed_bytes": 569799,
+          "escape": "\\",
+          "source_sha256": "c9f95708b1fcbc98c47b1d293ee21a1f5d3df55820de6992a3f698615d5dbffd",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "name": "VARCHAR",
+            "ein": "INTEGER",
+            "is_alias_of_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-political-affiliations": {
+          "table": "political_affiliations",
+          "source_records": 8486,
+          "table_rows": 8486,
+          "batches": 1,
+          "uncompressed_bytes": 878279,
+          "escape": "\\",
+          "source_sha256": "5c23bbd0085d8991529bdde341440e324e87fe2d051392c237a1e38cc594610d",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "political_party": "VARCHAR",
+            "source": "VARCHAR",
+            "date_start": "DATE",
+            "date_granularity_start": "VARCHAR",
+            "date_end": "DATE",
+            "date_granularity_end": "VARCHAR",
+            "person_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-races": {
+          "table": "judge_races",
+          "source_records": 6542,
+          "table_rows": 6542,
+          "batches": 1,
+          "uncompressed_bytes": 118245,
+          "escape": "\\",
+          "source_sha256": "8b1d588cf94795706de805be3d232daa23f3e7f0460262adbd9d1826ba993844",
+          "typed_columns": {
+            "id": "INTEGER",
+            "person_id": "INTEGER",
+            "race_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "people-db-retention-events": {
+          "table": "retention_events",
+          "source_records": 0,
+          "table_rows": 0,
+          "batches": 0,
+          "uncompressed_bytes": 140,
+          "escape": "\\",
+          "source_sha256": "93614f4ac9e1f63fd33e49b3706ff1a894a29a92fc6713a0122a6afe9151c74b",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "retention_type": "VARCHAR",
+            "date_retention": "DATE",
+            "votes_yes": "INTEGER",
+            "votes_no": "INTEGER",
+            "votes_yes_percent": "DOUBLE",
+            "votes_no_percent": "DOUBLE",
+            "unopposed": "BOOLEAN",
+            "won": "BOOLEAN",
+            "position_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "courts": {
+          "table": "courts",
+          "source_records": 3361,
+          "table_rows": 3361,
+          "batches": 1,
+          "uncompressed_bytes": 765809,
+          "escape": "\\",
+          "source_sha256": "f33e4c12e5a1d73574f7ecaafa8676887321dccae3ea29cc91d6a5935508baf3",
+          "typed_columns": {
+            "id": "VARCHAR",
+            "pacer_court_id": "INTEGER",
+            "pacer_has_rss_feed": "BOOLEAN",
+            "pacer_rss_entry_types": "VARCHAR",
+            "date_last_pacer_contact": "TIMESTAMP",
+            "fjc_court_id": "VARCHAR",
+            "date_modified": "TIMESTAMP",
+            "in_use": "BOOLEAN",
+            "has_opinion_scraper": "BOOLEAN",
+            "has_oral_argument_scraper": "BOOLEAN",
+            "position": "DOUBLE",
+            "citation_string": "VARCHAR",
+            "short_name": "VARCHAR",
+            "full_name": "VARCHAR",
+            "url": "VARCHAR",
+            "start_date": "DATE",
+            "end_date": "DATE",
+            "jurisdiction": "VARCHAR",
+            "notes": "VARCHAR",
+            "parent_court_id": "VARCHAR"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "courthouses": {
+          "table": "courthouses",
+          "source_records": 3361,
+          "table_rows": 3361,
+          "batches": 1,
+          "uncompressed_bytes": 177869,
+          "escape": "\\",
+          "source_sha256": "ba6b39442687d6be453b01e50f1a3e1e2fe28f270eb44305f94364dc8b8ed102",
+          "typed_columns": {
+            "id": "INTEGER",
+            "court_seat": "BOOLEAN",
+            "building_name": "VARCHAR",
+            "address1": "VARCHAR",
+            "address2": "VARCHAR",
+            "city": "VARCHAR",
+            "county": "VARCHAR",
+            "state": "VARCHAR",
+            "zip_code": "VARCHAR",
+            "country_code": "VARCHAR",
+            "court_id": "VARCHAR"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "originating-court-information": {
+          "table": "originating_court_information",
+          "source_records": 1060419,
+          "table_rows": 1060419,
+          "batches": 107,
+          "uncompressed_bytes": 141964218,
+          "escape": "\\",
+          "source_sha256": "422f0e413d21b8b6592c7fdbb8fba215c98492f6ab48764e6bb93f6cbc61e634",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "docket_number": "VARCHAR",
+            "assigned_to_str": "VARCHAR",
+            "ordering_judge_str": "VARCHAR",
+            "court_reporter": "VARCHAR",
+            "date_disposed": "DATE",
+            "date_filed": "DATE",
+            "date_judgment": "DATE",
+            "date_judgment_eod": "DATE",
+            "date_filed_noa": "DATE",
+            "date_received_coa": "DATE",
+            "assigned_to_id": "INTEGER",
+            "ordering_judge_id": "INTEGER",
+            "docket_number_raw": "VARCHAR"
+          },
+          "schema_only_columns_not_exported": [
+            "date_rehearing_denied"
+          ],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures": {
+          "table": "financial_disclosures",
+          "source_records": 32336,
+          "table_rows": 32336,
+          "batches": 4,
+          "uncompressed_bytes": 27321621,
+          "escape": "\\",
+          "source_sha256": "cb0c7e7194462392395e10e38456dfa265978ebfefdd0bd125568cf4481f8f9e",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "year": "INTEGER",
+            "download_filepath": "VARCHAR",
+            "filepath": "VARCHAR",
+            "thumbnail": "VARCHAR",
+            "thumbnail_status": "INTEGER",
+            "page_count": "INTEGER",
+            "sha1": "VARCHAR",
+            "report_type": "INTEGER",
+            "is_amended": "BOOLEAN",
+            "addendum_content_raw": "VARCHAR",
+            "addendum_redacted": "BOOLEAN",
+            "has_been_extracted": "BOOLEAN",
+            "person_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-agreements": {
+          "table": "disclosure_agreements",
+          "source_records": 10007,
+          "table_rows": 10007,
+          "batches": 2,
+          "uncompressed_bytes": 1759387,
+          "escape": "\\",
+          "source_sha256": "200c4974d058acac98030303416095b0143545ec0cf81752bfc391e88f199309",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "date_raw": "VARCHAR",
+            "parties_and_terms": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-debts": {
+          "table": "disclosure_debts",
+          "source_records": 18775,
+          "table_rows": 18775,
+          "batches": 2,
+          "uncompressed_bytes": 2527540,
+          "escape": "\\",
+          "source_sha256": "4af99e6bdf975261bef97f2794f1d6470531ad6e6bf0abf307e8b56a8e9f0783",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "creditor_name": "VARCHAR",
+            "description": "VARCHAR",
+            "value_code": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-gifts": {
+          "table": "disclosure_gifts",
+          "source_records": 2025,
+          "table_rows": 2025,
+          "batches": 1,
+          "uncompressed_bytes": 319060,
+          "escape": "\\",
+          "source_sha256": "81738829cff941b710e2dc8523e595d7092459c16858a30b5fbb9230147fec6b",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "source": "VARCHAR",
+            "description": "VARCHAR",
+            "value": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-non-investment-income": {
+          "table": "disclosure_non_investment_income",
+          "source_records": 15302,
+          "table_rows": 15302,
+          "batches": 2,
+          "uncompressed_bytes": 2329257,
+          "escape": "\\",
+          "source_sha256": "42d1846b4f2c23f516d8c4302e213b3ab6c76ecd0a4babafad646da1f9ae5084",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "date_raw": "VARCHAR",
+            "source_type": "VARCHAR",
+            "income_amount": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-positions": {
+          "table": "disclosure_positions",
+          "source_records": 37050,
+          "table_rows": 37050,
+          "batches": 4,
+          "uncompressed_bytes": 5310785,
+          "escape": "\\",
+          "source_sha256": "7c96b16f4687b10d6ca1d34c6ef150c2110b524e7b24c50e07060d4dd98d9646",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "position": "VARCHAR",
+            "organization_name": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-reimbursements": {
+          "table": "disclosure_reimbursements",
+          "source_records": 33472,
+          "table_rows": 33472,
+          "batches": 4,
+          "uncompressed_bytes": 6592633,
+          "escape": "\\",
+          "source_sha256": "2f97c8211d48529d211f24366dd967f7c5b3bcc8630f183d6e81d59bdd86a0cd",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "source": "VARCHAR",
+            "date_raw": "VARCHAR",
+            "location": "VARCHAR",
+            "purpose": "VARCHAR",
+            "items_paid_or_provided": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "financial-disclosures-spousal-income": {
+          "table": "disclosure_spousal_income",
+          "source_records": 20174,
+          "table_rows": 20174,
+          "batches": 3,
+          "uncompressed_bytes": 2745935,
+          "escape": "\\",
+          "source_sha256": "a934538c22514fc704e45a8cfea3fcc3b6f09eecbfa2f116282cdb7bd21b9f24",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "source_type": "VARCHAR",
+            "date_raw": "VARCHAR",
+            "redacted": "BOOLEAN",
+            "financial_disclosure_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "oral-arguments": {
+          "table": "oral_arguments",
+          "source_records": 103710,
+          "table_rows": 103710,
+          "batches": 363,
+          "uncompressed_bytes": 3030874893,
+          "escape": "\\",
+          "source_sha256": "1d4705b978e4b4dcc1c080d236385d961eb2878ff2230dd7c173e7bfe607dbf5",
+          "typed_columns": {
+            "id": "INTEGER",
+            "date_created": "TIMESTAMP",
+            "date_modified": "TIMESTAMP",
+            "source": "VARCHAR",
+            "case_name_short": "VARCHAR",
+            "case_name": "VARCHAR",
+            "case_name_full": "VARCHAR",
+            "judges": "VARCHAR",
+            "sha1": "VARCHAR",
+            "download_url": "VARCHAR",
+            "local_path_mp3": "VARCHAR",
+            "local_path_original_file": "VARCHAR",
+            "filepath_ia": "VARCHAR",
+            "ia_upload_failure_count": "INTEGER",
+            "duration": "INTEGER",
+            "processing_complete": "BOOLEAN",
+            "date_blocked": "DATE",
+            "blocked": "BOOLEAN",
+            "stt_status": "INTEGER",
+            "stt_transcript": "VARCHAR",
+            "stt_source": "INTEGER",
+            "docket_id": "INTEGER",
+            "stt_google_response": "VARCHAR"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [
+            "stt_google_response"
+          ],
+          "conversion_failures": 0
+        },
+        "search_opinioncluster_panel": {
+          "table": "opinion_cluster_panel",
+          "source_records": 835616,
+          "table_rows": 835616,
+          "batches": 84,
+          "uncompressed_bytes": 21586574,
+          "escape": "\\",
+          "source_sha256": "4435fd23841d4272304928f2b9bb10192cacb09db67d38b80f4920491f6fe823",
+          "typed_columns": {
+            "id": "INTEGER",
+            "opinioncluster_id": "INTEGER",
+            "person_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        },
+        "search_opinion_joined_by": {
+          "table": "opinion_joined_by",
+          "source_records": 1028,
+          "table_rows": 1028,
+          "batches": 1,
+          "uncompressed_bytes": 23595,
+          "escape": "\\",
+          "source_sha256": "b871e07bb80140377d7f3180a56c020c576570276fd91c0144a4e17d6e42dfe1",
+          "typed_columns": {
+            "id": "INTEGER",
+            "opinion_id": "INTEGER",
+            "person_id": "INTEGER"
+          },
+          "schema_only_columns_not_exported": [],
+          "compatibility_null_columns": [],
+          "conversion_failures": 0
+        }
+      },
+      "validation_failures": 0
+    },
+    "peak_audit_rss_kib": 404680
+  },
+  "previous_artifact": {
+    "commit": "012f6e852fe9ca113419ca4d9609642be064ae2f",
+    "sha256": "849e9c8f0710ee24bff6f35e69fece2fd053b657a8bda62bd305a061264f4239",
+    "bytes": 91238400
+  },
+  "source_date_outliers": [
+    {
+      "id": "44355",
+      "person_id": "14454",
+      "date_start": "0217-08-11"
+    }
+  ],
+  "all_date_ranges": {
+    "all_temporal_columns": {
+      "courts.date_last_pacer_contact": [
+        null,
+        null
+      ],
+      "courts.date_modified": [
+        "2013-08-14 16:46:30",
+        "2026-06-12 21:35:12.512793"
+      ],
+      "courts.start_date": [
+        "1200-01-01",
+        "2023-06-09"
+      ],
+      "courts.end_date": [
+        "1688-12-31",
+        "2012-09-15"
+      ],
+      "disclosure_agreements.date_created": [
+        "2021-01-03 23:24:29.424173",
+        "2023-08-31 15:48:39.552121"
+      ],
+      "disclosure_agreements.date_modified": [
+        "2021-01-03 23:24:29.424195",
+        "2024-11-11 23:51:18.565907"
+      ],
+      "disclosure_debts.date_created": [
+        "2021-01-03 23:46:56.633116",
+        "2023-08-31 15:48:41.695368"
+      ],
+      "disclosure_debts.date_modified": [
+        "2021-01-03 23:46:56.633134",
+        "2025-02-05 18:32:38.800839"
+      ],
+      "disclosure_gifts.date_created": [
+        "2021-01-04 00:43:37.644169",
+        "2023-08-31 15:48:38.099525"
+      ],
+      "disclosure_gifts.date_modified": [
+        "2021-01-04 00:43:37.644221",
+        "2023-08-31 15:48:38.099528"
+      ],
+      "disclosure_non_investment_income.date_created": [
+        "2021-01-03 23:21:55.443288",
+        "2023-08-31 15:48:41.698910"
+      ],
+      "disclosure_non_investment_income.date_modified": [
+        "2021-01-03 23:21:55.443308",
+        "2023-08-31 15:48:41.698915"
+      ],
+      "disclosure_positions.date_created": [
+        "2021-01-03 23:20:23.431978",
+        "2023-08-31 15:48:41.696204"
+      ],
+      "disclosure_positions.date_modified": [
+        "2021-01-03 23:20:23.432000",
+        "2023-08-31 15:48:41.696213"
+      ],
+      "disclosure_reimbursements.date_created": [
+        "2021-01-03 23:21:55.439456",
+        "2023-08-31 15:48:41.697399"
+      ],
+      "disclosure_reimbursements.date_modified": [
+        "2021-01-03 23:21:55.439473",
+        "2023-08-31 15:48:41.697404"
+      ],
+      "disclosure_spousal_income.date_created": [
+        "2021-01-03 23:20:23.436326",
+        "2023-08-31 15:48:42.394534"
+      ],
+      "disclosure_spousal_income.date_modified": [
+        "2021-01-03 23:20:23.436341",
+        "2023-08-31 15:48:42.394553"
+      ],
+      "educations.date_created": [
+        "2016-04-20 15:15:52.780039",
+        "2023-11-08 20:55:39.518944"
+      ],
+      "educations.date_modified": [
+        "2016-04-20 15:15:52.780075",
+        "2023-11-08 20:55:39.518960"
+      ],
+      "financial_disclosures.date_created": [
+        "2020-12-31 23:38:18.589831",
+        "2023-08-31 15:48:53.028697"
+      ],
+      "financial_disclosures.date_modified": [
+        "2020-12-31 23:39:42.984256",
+        "2024-11-15 07:46:19.228654"
+      ],
+      "judges.date_created": [
+        "2016-04-20 15:15:47.527089",
+        "2025-05-14 21:28:15.592545"
+      ],
+      "judges.date_modified": [
+        "2016-04-26 03:03:21.302131",
+        "2026-09-29 21:52:36.951211"
+      ],
+      "judges.date_completed": [
+        "2020-12-23 20:27:18",
+        "2022-08-09 23:31:19"
+      ],
+      "judges.date_dob": [
+        "1697-09-17",
+        "1999-12-14"
+      ],
+      "judges.date_dod": [
+        "0031-01-01",
+        "2023-12-01"
+      ],
+      "oral_arguments.date_created": [
+        "2014-10-31 01:58:26.541148",
+        "2026-09-30 17:42:42.181876"
+      ],
+      "oral_arguments.date_modified": [
+        "2019-07-19 09:34:33.798845",
+        "2026-09-30 18:54:52.272569"
+      ],
+      "oral_arguments.date_blocked": [
+        "2015-10-11",
+        "2026-03-04"
+      ],
+      "originating_court_information.date_created": [
+        "2018-06-27 18:36:09.761192",
+        "2026-09-30 08:48:50.908719"
+      ],
+      "originating_court_information.date_modified": [
+        "2018-06-27 19:34:15.944139",
+        "2026-09-30 08:48:50.908753"
+      ],
+      "originating_court_information.date_disposed": [
+        "1975-07-01",
+        "2099-01-01"
+      ],
+      "originating_court_information.date_filed": [
+        "1951-01-25",
+        "2029-09-09"
+      ],
+      "originating_court_information.date_judgment": [
+        "1971-08-08",
+        "3030-11-30"
+      ],
+      "originating_court_information.date_judgment_eod": [
+        "1020-06-01",
+        "3036-03-30"
+      ],
+      "originating_court_information.date_filed_noa": [
+        "1935-09-26",
+        "2916-02-18"
+      ],
+      "originating_court_information.date_received_coa": [
+        "1984-05-23",
+        "2030-06-25"
+      ],
+      "political_affiliations.date_created": [
+        "2016-04-20 15:15:47.555057",
+        "2022-08-09 23:34:19.382097"
+      ],
+      "political_affiliations.date_modified": [
+        "2016-04-20 15:15:47.555097",
+        "2022-08-09 23:34:19.382111"
+      ],
+      "political_affiliations.date_start": [
+        "1798-04-11",
+        "2022-03-30"
+      ],
+      "political_affiliations.date_end": [
+        "1806-02-21",
+        "2017-04-09"
+      ],
+      "positions.date_created": [
+        "2016-04-20 15:15:47.565552",
+        "2025-05-21 00:33:58.089702"
+      ],
+      "positions.date_modified": [
+        "2016-04-20 15:15:47.565585",
+        "2025-06-16 05:29:38.772988"
+      ],
+      "positions.date_nominated": [
+        "1789-09-24",
+        "2023-02-01"
+      ],
+      "positions.date_elected": [
+        "1980-11-04",
+        "2022-11-08"
+      ],
+      "positions.date_recess_appointment": [
+        "1789-11-18",
+        "2026-12-31"
+      ],
+      "positions.date_referred_to_judicial_committee": [
+        "1826-05-08",
+        "2021-04-19"
+      ],
+      "positions.date_judicial_committee_action": [
+        "1826-05-22",
+        "2022-07-19"
+      ],
+      "positions.date_hearing": [
+        "1983-02-23",
+        "2022-02-16"
+      ],
+      "positions.date_confirmation": [
+        "1789-09-25",
+        "2022-05-18"
+      ],
+      "positions.date_start": [
+        "0217-08-11",
+        "2024-12-31"
+      ],
+      "positions.date_termination": [
+        "0022-01-01",
+        "2916-01-01"
+      ],
+      "positions.date_retirement": [
+        "1919-10-06",
+        "2022-09-01"
+      ],
+      "schools.date_created": [
+        "2010-06-08 00:00:00",
+        "2022-08-09 21:34:17.203038"
+      ],
+      "schools.date_modified": [
+        "2010-06-08 00:00:00",
+        "2025-06-16 05:32:10.957501"
+      ]
+    },
+    "minimum": "0022-01-01",
+    "maximum": "3036-03-30",
+    "peak_rss_kib": 110240
+  },
+  "extreme_dates_source_verification": [
+    {
+      "table": "originating_court_information",
+      "column": "date_judgment_eod",
+      "source_file": "originating-court-information-2026-09-30.csv.bz2",
+      "verified_values_by_id": {
+        "966838": "3036-03-30"
+      }
+    },
+    {
+      "table": "positions",
+      "column": "date_termination",
+      "source_file": "people-db-positions-2026-09-30.csv.bz2",
+      "verified_values_by_id": {
+        "22118": "0022-01-01"
+      }
+    }
+  ]
+}

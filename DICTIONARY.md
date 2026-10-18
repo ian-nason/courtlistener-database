@@ -1,21 +1,23 @@
-# courtlistener Data Dictionary
+# CourtListener Data Dictionary
 
-Source: [CourtListener bulk data](https://www.courtlistener.com/help/api/bulk-data/) (Free Law Project), exports of 2024-05-06, 2025-01-31.
-Column names and types are CourtListener's own (bulk schema.sql); see its API docs for field meanings.
+Source: [CourtListener bulk data](https://www.courtlistener.com/help/api/bulk-data/) (Free Law Project), exports of 2026-09-30.
+Source status: Public Domain Mark / free of known copyright restrictions; not a CC0 dedication.
+Column types follow the pinned PostgreSQL schema. Quoted empty strings and unquoted missing values both normalize to NULL.
+Speech-to-text transcripts may contain recognition errors. Legacy oral-argument columns are preserved; new fields are appended.
 `v_judge_positions` joins positions to judges and courts.
 
 ## judges
 
 One row per person in CourtListener's judge database (federal and state judges, plus some other public figures): names, birth/death, gender, religion, FJC judge id (fjc_id joins fjc-judges.judges.jid)
 
-Rows: 16,190
+Rows: 16,191
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2016-04-20 11:15:47.527089 |  |
-| date_modified | TIMESTAMP | 0.0% | 2016-04-25 23:03:21.302131 |  |
-| date_completed | TIMESTAMP | 91.7% | 2020-12-23 15:27:18 |  |
+| date_created | TIMESTAMP | 0.0% | 2016-04-20 15:15:47.527089 |  |
+| date_modified | TIMESTAMP | 0.0% | 2016-04-26 03:03:21.302131 |  |
+| date_completed | TIMESTAMP | 91.7% | 2020-12-23 20:27:18 |  |
 | fjc_id | INTEGER | 77.1% | 1 | Federal Judicial Center judge id (the directory's jid, not nid); joins fjc-judges.judges.jid for 3,710 of 3,711 judges |
 | slug | VARCHAR | 0.0% | a-andrew-hauk |  |
 | name_first | VARCHAR | 0.0% | "Bob" |  |
@@ -43,13 +45,13 @@ Rows: 16,190
 
 One row per position held: judgeships (court_id joins courts), clerkships, offices and other jobs, with nomination, confirmation, start and termination dates, appointer, predecessor and how the seat was obtained
 
-Rows: 51,289
+Rows: 51,291
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2016-04-20 11:15:47.565552 |  |
-| date_modified | TIMESTAMP | 0.0% | 2016-04-20 11:15:47.565585 |  |
+| date_created | TIMESTAMP | 0.0% | 2016-04-20 15:15:47.565552 |  |
+| date_modified | TIMESTAMP | 0.0% | 2016-04-20 15:15:47.565585 |  |
 | position_type | VARCHAR | 41.4% | act-jud |  |
 | job_title | VARCHAR | 58.6% | &nbsp-1799 |  |
 | sector | INTEGER | 86.8% | 1 |  |
@@ -95,8 +97,8 @@ Rows: 12,777
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2016-04-20 11:15:52.780039 |  |
-| date_modified | TIMESTAMP | 0.0% | 2016-04-20 11:15:52.780075 |  |
+| date_created | TIMESTAMP | 0.0% | 2016-04-20 15:15:52.780039 |  |
+| date_modified | TIMESTAMP | 0.0% | 2016-04-20 15:15:52.780075 |  |
 | degree_level | VARCHAR | 2.1% | aa |  |
 | degree_detail | VARCHAR | 64.8% | 1959 |  |
 | degree_year | INTEGER | 38.1% | 0 |  |
@@ -112,8 +114,8 @@ Rows: 6,011
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2010-06-07 20:00:00 |  |
-| date_modified | TIMESTAMP | 0.0% | 2010-06-07 20:00:00 |  |
+| date_created | TIMESTAMP | 0.0% | 2010-06-08 00:00:00 |  |
+| date_modified | TIMESTAMP | 0.0% | 2010-06-08 00:00:00 |  |
 | name | VARCHAR | 0.0% | 85721 |  |
 | ein | INTEGER | 41.3% | -1 |  |
 | is_alias_of_id | INTEGER | 60.4% | 1 |  |
@@ -127,8 +129,8 @@ Rows: 8,486
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2016-04-20 11:15:47.555057 |  |
-| date_modified | TIMESTAMP | 0.0% | 2016-04-20 11:15:47.555097 |  |
+| date_created | TIMESTAMP | 0.0% | 2016-04-20 15:15:47.555057 |  |
+| date_modified | TIMESTAMP | 0.0% | 2016-04-20 15:15:47.555097 |  |
 | political_party | VARCHAR | 0.0% | d |  |
 | source | VARCHAR | 14.1% | a |  |
 | date_start | DATE | 51.5% | 1798-04-11 |  |
@@ -154,7 +156,7 @@ Rows: 6,542
 
 Every court CourtListener tracks (federal, state, tribal, special), with jurisdiction, PACER and FJC ids, dates and parent court
 
-Rows: 3,353
+Rows: 3,361
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
@@ -164,38 +166,38 @@ Rows: 3,353
 | pacer_rss_entry_types | VARCHAR | 94.6% | adr,answer,appeal,appeal-cr,charge-cr,cmp,cvbevent-cr,detention-cr,discov,dis... |  |
 | date_last_pacer_contact | TIMESTAMP | 100.0% |  |  |
 | fjc_court_id | VARCHAR | 94.0% | 0 |  |
-| date_modified | TIMESTAMP | 0.0% | 2013-08-14 12:46:30 |  |
+| date_modified | TIMESTAMP | 0.0% | 2013-08-14 16:46:30 |  |
 | in_use | BOOLEAN | 0.0% | false |  |
 | has_opinion_scraper | BOOLEAN | 0.0% | false |  |
 | has_oral_argument_scraper | BOOLEAN | 0.0% | false |  |
 | position | DOUBLE | 0.0% | 1.0 |  |
-| citation_string | VARCHAR | 39.2% | 10th |  |
+| citation_string | VARCHAR | 38.6% | 10th |  |
 | short_name | VARCHAR | 0.0% | Accomack County Circuit Court |  |
 | full_name | VARCHAR | 0.0% |  United States Court of Berlin |  |
-| url | VARCHAR | 68.7% | http://access.tarrantcounty.com/en/civil-courts/district-courts/141st-distric... |  |
-| start_date | DATE | 87.1% | 1200-01-01 |  |
+| url | VARCHAR | 68.6% | http://access.tarrantcounty.com/en/civil-courts/district-courts/141st-distric... |  |
+| start_date | DATE | 87.0% | 1200-01-01 |  |
 | end_date | DATE | 88.0% | 1688-12-31 |  |
 | jurisdiction | VARCHAR | 0.0% | C |  |
 | notes | VARCHAR | 55.4% | "One of three Commissions established over the years to alleviate case load o... |  |
-| parent_court_id | VARCHAR | 15.9% | ag |  |
+| parent_court_id | VARCHAR | 16.1% | ag |  |
 
 ## courthouses
 
 Courthouse addresses per court
 
-Rows: 3,352
+Rows: 3,361
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| court_seat | BOOLEAN | 0.0% | false |  |
-| building_name | VARCHAR | 100.0% |  |  |
-| address1 | VARCHAR | 100.0% |  |  |
+| court_seat | BOOLEAN | 0.1% | false |  |
+| building_name | VARCHAR | 99.9% | United States Patent and Trademark Office |  |
+| address1 | VARCHAR | 99.9% | 600 Dulany Street |  |
 | address2 | VARCHAR | 100.0% |  |  |
-| city | VARCHAR | 99.9% | Baltimore |  |
-| county | VARCHAR | 100.0% |  |  |
+| city | VARCHAR | 99.7% | Alexandria |  |
+| county | VARCHAR | 100.0% | Polk |  |
 | state | VARCHAR | 0.0% | AK |  |
-| zip_code | VARCHAR | 100.0% |  |  |
+| zip_code | VARCHAR | 99.9% | 22314 |  |
 | country_code | VARCHAR | 0.0% | GB |  |
 | court_id | VARCHAR | 0.0% | acca | CourtListener court code; joins courts.id |
 
@@ -203,25 +205,26 @@ Rows: 3,352
 
 Lower-court information for appellate dockets (judges, dates, docket numbers)
 
-Rows: 38,926
+Rows: 1,060,419
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2018-06-27 14:36:09.761192 |  |
-| date_modified | TIMESTAMP | 0.0% | 2018-06-27 15:34:15.944139 |  |
-| docket_number | VARCHAR | 6.8% | 0 |  |
-| assigned_to_str | VARCHAR | 45.5% | A. Kathleen Tomlinson |  |
-| ordering_judge_str | VARCHAR | 94.2% | Adam B. Abelson U. S. |  |
-| court_reporter | VARCHAR | 64.5% | ALMD Court Reporter TBA |  |
-| date_disposed | DATE | 92.3% | 1986-09-11 |  |
-| date_filed | DATE | 15.2% | 1951-01-25 |  |
-| date_judgment | DATE | 47.5% | 1971-08-08 |  |
-| date_judgment_eod | DATE | 70.5% | 1985-06-26 |  |
-| date_filed_noa | DATE | 22.7% | 1984-07-10 |  |
-| date_received_coa | DATE | 47.2% | 1988-03-25 |  |
-| assigned_to_id | INTEGER | 58.7% | 1001 |  |
-| ordering_judge_id | INTEGER | 96.8% | 10045 |  |
+| date_created | TIMESTAMP | 0.0% | 2018-06-27 18:36:09.761192 |  |
+| date_modified | TIMESTAMP | 0.0% | 2018-06-27 19:34:15.944139 |  |
+| docket_number | VARCHAR | 6.9% | #1999-CA-000121-DG |  |
+| assigned_to_str | VARCHAR | 56.2% | A. Andrew Hauk |  |
+| ordering_judge_str | VARCHAR | 99.6% | Adam B. Abelson U. S. |  |
+| court_reporter | VARCHAR | 87.6% | 155TH COUNTY COURT REPORTER |  |
+| date_disposed | DATE | 99.6% | 1975-07-01 |  |
+| date_filed | DATE | 95.5% | 1951-01-25 |  |
+| date_judgment | DATE | 83.4% | 1971-08-08 |  |
+| date_judgment_eod | DATE | 98.5% | 1020-06-01 |  |
+| date_filed_noa | DATE | 95.9% | 1935-09-26 |  |
+| date_received_coa | DATE | 97.3% | 1984-05-23 |  |
+| assigned_to_id | INTEGER | 96.8% | 1000 |  |
+| ordering_judge_id | INTEGER | 99.8% | 10045 |  |
+| docket_number_raw | VARCHAR | 6.9% | #65, et al. |  |
 
 ## financial_disclosures
 
@@ -232,8 +235,8 @@ Rows: 32,336
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 100 |  |
-| date_created | TIMESTAMP | 0.0% | 2020-12-31 18:38:18.589831 |  |
-| date_modified | TIMESTAMP | 0.0% | 2020-12-31 18:39:42.984256 |  |
+| date_created | TIMESTAMP | 0.0% | 2020-12-31 23:38:18.589831 |  |
+| date_modified | TIMESTAMP | 0.0% | 2020-12-31 23:39:42.984256 |  |
 | year | INTEGER | 0.0% | 1987 |  |
 | download_filepath | VARCHAR | 0.0% | https://com-courtlistener-storage.s3-us-west-2.amazonaws.com/financial-disclo... |  |
 | filepath | VARCHAR | 0.0% | us/federal/judicial/financial-disclosures/1/george-washington-disclosure.1990... |  |
@@ -263,8 +266,8 @@ Rows: 10,007
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 100 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:24:29.424173 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:24:29.424195 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:24:29.424173 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:24:29.424195 |  |
 | date_raw | VARCHAR | 6.6% | "997 |  |
 | parties_and_terms | VARCHAR | 0.4% |   |  |
 | redacted | BOOLEAN | 0.0% | false |  |
@@ -279,11 +282,11 @@ Rows: 18,775
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 100 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:46:56.633116 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:46:56.633134 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:46:56.633116 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:46:56.633134 |  |
 | creditor_name | VARCHAR | 0.2% | "LAS CRUCES NM (SEE NOTE IN PART VIII) |  |
 | description | VARCHAR | 0.4% |   |  |
-| value_code | VARCHAR | 8.9% |   |  |
+| value_code | VARCHAR | 8.9% | -1 |  |
 | redacted | BOOLEAN | 0.0% | false |  |
 | financial_disclosure_id | INTEGER | 0.0% | 10001 | Joins financial_disclosures.id |
 
@@ -296,8 +299,8 @@ Rows: 2,025
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1004 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 19:43:37.644169 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 19:43:37.644221 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-04 00:43:37.644169 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-04 00:43:37.644221 |  |
 | source | VARCHAR | 2.9% | & Mrs. David Spurr |  |
 | description | VARCHAR | 5.0% | "7 Shares Walmart |  |
 | value | VARCHAR | 21.6% |   |  |
@@ -313,8 +316,8 @@ Rows: 15,302
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 10 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:21:55.443288 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:21:55.443308 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:21:55.443288 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:21:55.443308 |  |
 | date_raw | VARCHAR | 4.3% | "1 |  |
 | source_type | VARCHAR | 1.9% |   |  |
 | income_amount | VARCHAR | 1.3% |  (Teaching Income) |  |
@@ -330,8 +333,8 @@ Rows: 37,050
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 10001 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:20:23.431978 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:20:23.432 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:20:23.431978 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:20:23.432 |  |
 | position | VARCHAR | 0.6% | !' 3o0arc of Trustees |  |
 | organization_name | VARCHAR | 2.1% |   |  |
 | redacted | BOOLEAN | 0.0% | false |  |
@@ -346,8 +349,8 @@ Rows: 33,472
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:21:55.439456 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:21:55.439473 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:21:55.439456 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:21:55.439473 |  |
 | source | VARCHAR | 3.8% |  EE   |  |
 | date_raw | VARCHAR | 24.0% |  6/17-6/21/2019 |  |
 | location | VARCHAR | 25.1% |  Boca Raton, FL Fed |  |
@@ -365,8 +368,8 @@ Rows: 20,174
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 10002 |  |
-| date_created | TIMESTAMP | 0.0% | 2021-01-03 18:20:23.436326 |  |
-| date_modified | TIMESTAMP | 0.0% | 2021-01-03 18:20:23.436341 |  |
+| date_created | TIMESTAMP | 0.0% | 2021-01-03 23:20:23.436326 |  |
+| date_modified | TIMESTAMP | 0.0% | 2021-01-03 23:20:23.436341 |  |
 | source_type | VARCHAR | 0.9% |   |  |
 | date_raw | VARCHAR | 2.0% | "Aiil.Compuier Sves.A Scisco Svws:-ems |  |
 | redacted | BOOLEAN | 0.0% | false |  |
@@ -374,39 +377,41 @@ Rows: 20,174
 
 ## oral_arguments
 
-Oral-argument audio metadata (case name, docket, court, date, duration); the 2024-05-06 export
+Oral-argument audio metadata and source-provided speech-to-text transcripts; transcription can contain errors
 
-Rows: 89,468
+Rows: 103,710
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
 | id | INTEGER | 0.0% | 1 |  |
-| date_created | TIMESTAMP | 0.0% | 2014-10-30 21:58:26.541148 |  |
-| date_modified | TIMESTAMP | 0.0% | 2015-05-06 23:12:13.363952 |  |
+| date_created | TIMESTAMP | 0.0% | 2014-10-31 01:58:26.541148 |  |
+| date_modified | TIMESTAMP | 0.0% | 2019-07-19 09:34:33.798845 |  |
 | source | VARCHAR | 0.0% | C |  |
-| case_name_short | VARCHAR | 59.2% | $1 |  |
+| case_name_short | VARCHAR | 58.3% | $1 |  |
 | case_name | VARCHAR | 0.0% | "Richard ""Bud"" Steen v. Robert Murray" |  |
 | case_name_full | VARCHAR | 100.0% | Friends of Animals v. Dan Ashe, In his official capacity as Director U.S. Fis... |  |
-| judges | VARCHAR | 58.4% | A. Marvin Quattlebaum Jr., Allison J. Rushing, Rossie David Alston Jr. |  |
+| judges | VARCHAR | 60.3% | A. Marvin Quattlebaum Jr., Allison J. Rushing, DeAndrea Gist Benjamin |  |
 | sha1 | VARCHAR | 0.0% | 0000a23423bb52207fb0e99cc239f069bd170050 |  |
 | download_url | VARCHAR | 0.0% | http://8cc-www.ca8.uscourts.gov/OAaudio/2013/12/123207.MP3 |  |
-| local_path_mp3 | VARCHAR | 0.2% | mp3/1969/12/31/billy_test_cl.mp3 |  |
+| local_path_mp3 | VARCHAR | 0.1% | mp3/1969/12/31/billy_test_cl.mp3 |  |
 | local_path_original_file | VARCHAR | 0.0% | MP3/2014/05/13/occidental_fire__casualty_co._v._adam_soczynski.MP3 |  |
-| filepath_ia | VARCHAR | 1.8% | https://archive.org/download/gov.uscourts.ca1./gov.uscourts.ca1..2015-01-09.mp3 |  |
-| ia_upload_failure_count | INTEGER | 98.4% | 1 |  |
-| duration | INTEGER | 0.2% | 0 |  |
+| filepath_ia | VARCHAR | 13.2% | https://archive.org/download/gov.uscourts.ca1./gov.uscourts.ca1..2015-01-09.mp3 |  |
+| ia_upload_failure_count | INTEGER | 91.2% | 1 |  |
+| duration | INTEGER | 0.1% | 0 |  |
 | processing_complete | BOOLEAN | 0.0% | false |  |
-| date_blocked | DATE | 89.5% | 2015-10-11 |  |
+| date_blocked | DATE | 90.9% | 2015-10-11 |  |
 | blocked | BOOLEAN | 0.0% | false |  |
 | stt_status | INTEGER | 0.0% | 0 |  |
-| stt_google_response | VARCHAR | 100.0% |  |  |
+| stt_google_response | VARCHAR | 100.0% |  | Retired upstream field; retained as NULL for compatibility. Use stt_transcript. |
 | docket_id | INTEGER | 0.0% | 1003286 |  |
+| stt_transcript | VARCHAR | 0.3% |   May it please the court. The district court erred in this matter because it... | Source speech-to-text transcript; may contain recognition errors |
+| stt_source | INTEGER | 0.3% | 1 |  |
 
 ## opinion_cluster_panel
 
 Judge-to-opinion-cluster panel links (person_id joins judges; cluster ids refer to CourtListener opinion clusters, not included here)
 
-Rows: 831,965
+Rows: 835,616
 
 | Column | Type | Nulls | Example | Join |
 |--------|------|-------|---------|------|
