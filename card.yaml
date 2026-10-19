@@ -20,37 +20,29 @@ table_columns:
 - description
 - row_count
 - column_count
-intro: 'September 30, 2026 snapshot: 16,191 judge-database people, 51,291 positions,
-
+intro: |
+  September 30, 2026 snapshot: 16,191 judge-database people, 51,291 positions,
   3,361 courts, 32,336 federal judicial disclosure reports (1987-2022), and
-
   103,710 oral-argument records, including 103,418 source speech-to-text transcripts.
-
   Twenty tables include education, party affiliations, race, disclosure line items,
-
   lower-court information and judge-to-opinion links. Transcripts may contain recognition
-
-  errors. FJC identifiers join the companion fjc-judges database.'
-quick_start_sql: 'SELECT j.name_last, j.name_first, d.year, COUNT(g.id) AS gifts
-
+  errors. Join `judges.fjc_id` to `fjc-judges.judges.jid`, not its `nid` field. Of 3,711 populated IDs, 3,710 match the October 17 FJC snapshot.
+quick_start_sql: |
+  SELECT j.id AS judge_id, j.name_last, j.name_first, d.year, COUNT(g.id) AS gifts
   FROM cl.financial_disclosures d JOIN cl.judges j ON j.id = d.person_id
-
   LEFT JOIN cl.disclosure_gifts g ON g.financial_disclosure_id = d.id
-
-  WHERE d.year >= 2018 GROUP BY 1, 2, 3 HAVING COUNT(g.id) > 0 ORDER BY 4 DESC LIMIT 20;
-
-  '
-footer: 'Build pipeline and caveats: https://github.com/ian-nason/courtlistener-database
-
+  WHERE d.year >= 2018 GROUP BY 1, 2, 3, 4 HAVING COUNT(g.id) > 0 ORDER BY gifts DESC, judge_id, d.year LIMIT 20;
+footer: |
+  Build pipeline and caveats: https://github.com/ian-nason/courtlistener-database
   Source: Free Law Project, CourtListener bulk data (Public Domain Mark); please credit CourtListener.
-
   Financial disclosures have uneven coverage and end in 2022. Dockets, opinion text,
-
   investment holdings and audio files are not included. Position dates include an upstream
-
-  year-0217 outlier, retained as supplied. Other source dates extend from year 0022 to 3036;
-  these outliers do not describe meaningful coverage. Quoted empty strings and unquoted missing values
-
+  year-0217 outlier, retained as supplied. Other source dates extend from year 0022 to 3036; these outliers do not describe meaningful coverage. Quoted empty strings and unquoted missing values
   both normalize to NULL, preserving the earlier database convention. Transcripts increase
+  the file size to about 3.03 GiB; use selected columns and filters for remote queries.
 
-  the file size to about 3.03 GiB; use selected columns and filters for remote queries.'
+  ## Installation and query limits
+
+  Install or upgrade Python datapond (tested 0.1.5), or use CRAN R datapond 0.1.0. R 0.1.1 is a separate development version. Remote queries run on your machine. File size is disk storage, not required RAM; selected columns reduce transfer, but filters and a final `LIMIT` do not guarantee a small scan. A 128 MiB setting limits DuckDB's buffer pool, not the whole Python/R process. Larger queries can fail with spill disabled. Download only when you have room for the file, temporary download bytes and any existing copy.
+
+  The gift example groups recorded line items by stable judge ID and report year; counts are not distinct disclosure reports. Amendments and uneven coverage remain.
