@@ -35,16 +35,24 @@ See [DICTIONARY.md](DICTIONARY.md) for columns, types and null rates and
 
 ## Quick start
 
+The database file is 3.03 GiB on disk.
+
+Install/upgrade Python with `python -m pip install --upgrade datapond` (the examples use 0.1.5), or install released R datapond from [CRAN](https://cran.r-project.org/package=datapond) with `install.packages("datapond")`. R 0.1.1 remains a separate development version.
+
+Remote queries run on your machine. File size is disk storage, not required RAM; selected columns reduce transfer, but filters and a final `LIMIT` do not guarantee a small scan. A 128 MiB setting limits DuckDB's buffer pool, not the whole Python/R process. Larger queries can fail with spill disabled. Download only when you have room for the file, temporary download bytes and any existing copy. The package examples below set limits immediately after connecting. For settings before attachment, use the [direct SQL quick start in the dataset card](https://huggingface.co/datasets/Nason/courtlistener-database#quick-start) in a DuckDB SQL client.
+
 ```python
 import datapond
 con = datapond.connect("courtlistener")
+con.execute("SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
 con.sql("""
-    SELECT j.name_last, j.name_first, d.year, COUNT(g.id) AS gifts
+    SELECT j.id AS judge_id, j.name_last, j.name_first, d.year, COUNT(g.id) AS gifts
     FROM financial_disclosures d JOIN judges j ON j.id = d.person_id
     LEFT JOIN disclosure_gifts g ON g.financial_disclosure_id = d.id
     WHERE d.year >= 2018
-    GROUP BY 1, 2, 3 HAVING COUNT(g.id) > 0 ORDER BY 4 DESC LIMIT 20
+    GROUP BY 1, 2, 3, 4 HAVING COUNT(g.id) > 0 ORDER BY gifts DESC, judge_id, d.year LIMIT 20
 """).show()
+con.close()
 ```
 
 R is available on [CRAN](https://cran.r-project.org/package=datapond):
@@ -52,9 +60,12 @@ R is available on [CRAN](https://cran.r-project.org/package=datapond):
 ```r
 install.packages("datapond")
 con <- datapond::dp_connect("courtlistener")
+DBI::dbExecute(con, "SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
 DBI::dbGetQuery(con, "SELECT COUNT(*) AS judges FROM judges")
-DBI::dbDisconnect(con, shutdown = TRUE)
+datapond::dp_disconnect(con)
 ```
+
+The gift query counts recorded gift items by person and report year, not unique reports. Grouping by `judges.id` keeps people with the same name separate. Financial-disclosure amendments and uneven coverage remain important.
 
 Remote queries should select needed columns and filter early. Transcript text accounts
 for most of the database size; avoid collecting the whole table into application memory.
@@ -151,3 +162,5 @@ it is free of known copyright restrictions. This is the source's public-domain s
 statement, not a CC0 dedication added by this project. Database metadata and the hosted
 card identify that source statement and link to it. Please credit CourtListener and
 Free Law Project when using the data.
+
+The reviewed current hosted card is retained in [HF-README.md](HF-README.md). The checked publisher still generates future cards from `card.yaml`; that template includes recurring reader guidance. Compare the generated card against this reviewed copy before upload. For a future release, update counts and version links, retain the guidance and caveats, and inspect the rendered card before upload.
