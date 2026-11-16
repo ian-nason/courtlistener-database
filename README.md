@@ -1,20 +1,56 @@
 # CourtListener judges, courts, disclosures and oral arguments in DuckDB
 
-This database contains selected [CourtListener bulk exports](https://www.courtlistener.com/help/api/bulk-data/)
-from Free Law Project, dated **September 30, 2026**: **2,277,934 rows across 20 tables**.
-The approximately **3.03 GiB** file includes source speech-to-text transcripts. It joins
-the companion [FJC judges directory](https://github.com/ian-nason/fjc-judges-database)
-through `judges.fjc_id`.
+Selected CourtListener data for studying judicial careers, reported financial interests and oral arguments. This September 30, 2026 source snapshot includes 16,191 people in the judge database, 32,336 financial-disclosure reports from 1987–2022 and 103,710 oral-argument records, often with source speech-to-text transcripts. It does not include opinion text, full dockets, audio files or investment holdings; disclosure coverage is uneven.
+
+<a id="quick-start"></a>
+
+## Start querying
+
+Show five financial-disclosure records dated from 2018 onward, with the report ID, year and person ID. These are reports, so one person can appear more than once.
+
+`person_id` links each report to `judges.id`; `id` identifies the report and `year` is its recorded report year.
+
+Choose R or Python. Install datapond once: use `install.packages("datapond")` in R, or run `python -m pip install datapond` in a terminal.
+
+### R
+
+```r
+library(datapond)
+con <- dp_connect("courtlistener")
+tryCatch({
+  DBI::dbExecute(con, "SET threads=1")
+  DBI::dbExecute(con, "SET memory_limit='128MiB'")
+  DBI::dbExecute(con, "SET max_temp_directory_size='0B'")
+  print(DBI::dbGetQuery(con, "SELECT id,year,person_id FROM financial_disclosures WHERE year>=2018 LIMIT 5"))
+}, finally = dp_disconnect(con))
+```
+
+### Python
+
+```python
+import datapond
+con = datapond.connect('courtlistener')
+try:
+    con.execute("SET threads=1")
+    con.execute("SET memory_limit='128MiB'")
+    con.execute("SET max_temp_directory_size='0B'")
+    print(con.execute("""SELECT id,year,person_id FROM financial_disclosures WHERE year>=2018 LIMIT 5""").fetchall())
+finally:
+    con.close()
+```
+
+Queries run on your computer and read the byte ranges they need. A small result can still require a large scan. These examples limit DuckDB to one thread and a 128 MiB buffer pool with disk spill disabled; that is not a limit on the entire R or Python process. Larger analyses may need more memory or a local download with enough disk space.
+
+<a id="additional-dataset-notes"></a>
+
+## Tables, fields and joins
+
+See the [data dictionary](https://github.com/ian-nason/courtlistener-database/blob/main/DICTIONARY.md) for column definitions.
+
+**2,277,934 rows across 20 tables.** Start with reports and their line items, then people, positions and courts. Oral arguments and opinion links are separate subjects.
 
 | Table | One row per | Rows |
 | --- | --- | ---: |
-| `judges` | judge-database person | 16,191 |
-| `positions` | position held, including nonjudicial employment | 51,291 |
-| `educations` / `schools` | degree / school | 12,777 / 6,011 |
-| `political_affiliations` | recorded affiliation | 8,486 |
-| `judge_races` | person-to-race link, with decoded label | 6,542 |
-| `courts` / `courthouses` | court / courthouse address | 3,361 / 3,361 |
-| `originating_court_information` | appellate docket's lower-court information | 1,060,419 |
 | `financial_disclosures` | judicial disclosure report, 1987–2022 | 32,336 |
 | `disclosure_agreements` | agreement | 10,007 |
 | `disclosure_debts` | liability | 18,775 |
@@ -23,23 +59,47 @@ through `judges.fjc_id`.
 | `disclosure_positions` | outside position | 37,050 |
 | `disclosure_reimbursements` | reimbursement | 33,472 |
 | `disclosure_spousal_income` | spousal income item | 20,174 |
+| `judges` | judge-database person | 16,191 |
+| `positions` | position held, including nonjudicial employment | 51,291 |
+| `educations` / `schools` | degree / school | 12,777 / 6,011 |
+| `political_affiliations` | recorded affiliation | 8,486 |
+| `judge_races` | person-to-race link, with decoded label | 6,542 |
+| `courts` / `courthouses` | court / courthouse address | 3,361 / 3,361 |
+| `originating_court_information` | appellate docket's lower-court information | 1,060,419 |
 | `oral_arguments` | recording metadata, with transcripts when supplied | 103,710 |
 | `opinion_cluster_panel` / `opinion_joined_by` | judge-to-opinion link | 835,616 / 1,028 |
+
+The companion [FJC judges directory](https://github.com/ian-nason/fjc-judges-database) supplies additional biographical and appointment information.
 
 `v_judge_positions` joins the 51,291 positions to judges and courts. Keys are
 `judges.id = person_id`, `courts.id = court_id`, and
 `financial_disclosures.id = financial_disclosure_id`. Of 3,711 populated FJC IDs,
 3,710 match the October 17, 2026 FJC directory's `judges.jid`.
-See [DICTIONARY.md](DICTIONARY.md) for columns, types and null rates and
-[refresh provenance](docs/refresh-2026-09-30.json) for source identities and audit results.
+See [DICTIONARY.md](DICTIONARY.md) for columns, types and null rates.
 
-## Quick start
+<a id="source-interpretation-and-compatibility"></a>
 
-The database file is 3.03 GiB on disk.
+## Researcher caveats
 
-Install/upgrade Python with `python -m pip install --upgrade datapond` (the examples use 0.1.5), or install released R datapond from [CRAN](https://cran.r-project.org/package=datapond) with `install.packages("datapond")`. R 0.1.1 remains a separate development version.
+- CourtListener publishes quarterly snapshots, not incremental changes. A snapshot date does not imply every table has observations through that date.
+- There are 103,418 populated `stt_transcript` values. These source speech-to-text
+  transcripts may contain recognition errors; audio files are not included.
+- Disclosure reports are extracted from PDFs and have uneven coverage: 1,759 reports
+  for 2020, 14 for 2021, and 12 for 2022. `is_amended` identifies amended reports.
+- Position type is NULL in 21,225 rows. Positions include law practice, government
+  and academic jobs. The latest recorded start is 2024-12-31. Position ID 44355 has
+  source date `0217-08-11`; it is retained without inventing a correction. Across all
+  date columns, supplied outliers extend from `0022-01-01` (position 22118 termination)
+  to `3036-03-30` (originating-court record 966838 judgment entry). Both extremes were
+  verified against raw exports. These are data-quality limits, not meaningful coverage.
+- Judges include federal and state courts with varying completeness. Empty retention
+  events are omitted. Dockets, opinion text and investment holdings are not included;
+  opinion link targets must be resolved through CourtListener.
+- Quoted empty strings and unquoted missing values both become NULL. Numeric/DOUBLE columns retain floating-point values and can round decimals.
 
-Remote queries run on your machine. File size is disk storage, not required RAM; selected columns reduce transfer, but filters and a final `LIMIT` do not guarantee a small scan. A 128 MiB setting limits DuckDB's buffer pool, not the whole Python/R process. Larger queries can fail with spill disabled. Download only when you have room for the file, temporary download bytes and any existing copy. The package examples below set limits immediately after connecting. For settings before attachment, use the [direct SQL quick start in the dataset card](https://huggingface.co/datasets/Nason/courtlistener-database#quick-start) in a DuckDB SQL client.
+## More example queries
+
+The gift query counts recorded gift items by person and report year, not unique reports. Grouping by `judges.id` keeps people with the same name separate. Financial-disclosure amendments and uneven coverage remain important.
 
 ```python
 import datapond
@@ -55,31 +115,45 @@ con.sql("""
 con.close()
 ```
 
-R is available on [CRAN](https://cran.r-project.org/package=datapond):
+The R datapond package is available on [CRAN](https://cran.r-project.org/package=datapond):
 
 ```r
-install.packages("datapond")
+# Install once if needed: install.packages("datapond")
 con <- datapond::dp_connect("courtlistener")
-DBI::dbExecute(con, "SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
-DBI::dbGetQuery(con, "SELECT COUNT(*) AS judges FROM judges")
-datapond::dp_disconnect(con)
+tryCatch({
+  DBI::dbExecute(con, "SET memory_limit='128MiB'; SET threads=1; SET max_temp_directory_size='0B'")
+  print(DBI::dbGetQuery(con, "SELECT COUNT(*) AS judge_database_people FROM judges"))
+}, finally = datapond::dp_disconnect(con))
 ```
 
-The gift query counts recorded gift items by person and report year, not unique reports. Grouping by `judges.id` keeps people with the same name separate. Financial-disclosure amendments and uneven coverage remain important.
+<a id="advanced-access-quick-start"></a>
+
+## Other ways to connect
+
+The database file is 3.03 GiB on disk.
+
+Install or upgrade the Python datapond package with `python -m pip install --upgrade datapond` (the examples use 0.1.5), or install released R datapond from [CRAN](https://cran.r-project.org/package=datapond) with `install.packages("datapond")`. R 0.1.1 remains a separate development version.
+
+Remote queries run on your machine. File size is disk storage, not required RAM; selected columns reduce transfer, but filters and a final `LIMIT` do not guarantee a small scan. A 128 MiB setting limits DuckDB's buffer pool, not the whole Python/R process. Larger queries can fail with spill disabled. Download only when you have room for the file, temporary download bytes and any existing copy. The package examples above set limits immediately after connecting. For settings before attachment, use the [direct DuckDB SQL example in the dataset card](https://huggingface.co/datasets/Nason/courtlistener-database#other-ways-to-connect-direct-duckdb-sql) in a DuckDB SQL client.
 
 Remote queries should select needed columns and filter early. Transcript text accounts
 for most of the database size; avoid collecting the whole table into application memory.
 
+<a id="coverage-fields-and-sources"></a>
+
+## Sources and maintenance
+
+### Sources and snapshot
+
+Source: [Free Law Project (CourtListener bulk data)](https://www.courtlistener.com/help/api/bulk-data/). License: Public Domain Mark (CourtListener bulk data).
+
+The 23 pinned source files total 731,431,632 compressed bytes. See [refresh provenance](docs/refresh-2026-09-30.json) for source identities and audit results.
+
 Originating-court information grew from 38,926 to 1,060,419 source records; its IDs
 and oral-argument IDs were checked for uniqueness as well as matching source counts.
 
-## Source interpretation and compatibility
+### Schema and parser compatibility
 
-- The 23 pinned source files total 731,431,632 compressed bytes. CourtListener publishes
-  quarterly snapshots, not incremental changes. A snapshot date does not imply every
-  table has observations through that date.
-- There are 103,418 populated `stt_transcript` values. These source speech-to-text
-  transcripts may contain recognition errors; audio files are not included.
 - All previous column names, types and order remain. `stt_transcript`, `stt_source`
   and originating `docket_number_raw` are additive. Retired `stt_google_response`
   remains NULL in its original position, matching every row in the previous artifact.
@@ -90,19 +164,8 @@ and oral-argument IDs were checked for uniqueness as well as matching source cou
   previous database, quoted empty strings and unquoted missing values both become NULL.
   Integer overflow, fractional integer values and invalid dates/booleans fail conversion.
   Numeric/DOUBLE columns retain the prior floating-point representation and can round decimals.
-- Disclosure reports are extracted from PDFs and have uneven coverage: 1,759 reports
-  for 2020, 14 for 2021, and 12 for 2022. `is_amended` identifies amended reports.
-- Position type is NULL in 21,225 rows. Positions include law practice, government
-  and academic jobs. The latest recorded start is 2024-12-31. Position ID 44355 has
-  source date `0217-08-11`; it is retained without inventing a correction. Across all
-  date columns, supplied outliers extend from `0022-01-01` (position 22118 termination)
-  to `3036-03-30` (originating-court record 966838 judgment entry). Both extremes were
-  verified against raw exports. These are data-quality limits, not meaningful coverage.
-- Judges include federal and state courts with varying completeness. Empty retention
-  events are omitted. Dockets, opinion text and investment holdings are not included;
-  opinion link targets must be resolved through CourtListener.
 
-## Bounded local build
+### Bounded local build
 
 Use the existing environment and a new output directory. Python 3.10+ and DuckDB
 1.4.4+ are required; the refresh used DuckDB 1.5.5 and read/storage compatibility
@@ -134,7 +197,7 @@ the same memory/temp limits. A direct open followed by a metadata checkpoint cau
 unexpectedly large scratch use during this refresh and was stopped. Keep original
 artifacts and failed staging files until recovery has been verified.
 
-## Audited publication and recovery
+### Audited publication and recovery
 
 `publish_checked.py` requires a validated provenance file, exact database and dictionary
 SHA-256, matching actual counts and schemas, a working card example, and the expected
@@ -154,7 +217,7 @@ and README in a new atomic commit guarded by the current parent, and remove only
 hosted metadata paths absent from that revision after inspecting its file list. Keep
 local evidence. No reset, deletion of the original, or rollback has been performed.
 
-## License and attribution
+### License and attribution
 
 Code: MIT. Free Law Project marks the [bulk data](https://www.courtlistener.com/help/api/bulk-data/)
 with a [Public Domain Mark](https://creativecommons.org/publicdomain/mark/1.0/) and says
